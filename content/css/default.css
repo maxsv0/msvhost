@@ -1,0 +1,239 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300');
+
+body {
+    background: url('/content/images/bg-5.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	color:#000;
+  	background-color:#fff;
+  	padding-top:100px;
+}
+
+
+
+
+
+
+.msv-land-logo {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 30px;
+    height: auto;
+    line-height: normal;
+    font-weight: 800;
+}
+
+
+
+.msv-logo-small{
+    margin-top: 20px;
+}
+
+.msv-logo-small{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 50px;
+}
+
+.msv-logo-small>a:hover, .msv-logo-small>a:visited, .msv-logo-small>a:focus{
+    color: #fff;
+    text-decoration: none;
+}
+
+.msv-land-slogan{
+    font-size: 22px;
+    padding: 20px 5px;
+    color: #9e9e9e;
+}
+
+.msv-slogan-small{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.msv-land-list-title{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 35px 0px;
+    color: #fff;
+    padding: 150px 0 100px;
+    text-align: center;
+}
+
+.msv-websites{
+    padding: 30px 25px;
+}
+
+.msv-screenshot {
+    height:400px;
+    background-size: cover;
+    background-color: #000;
+    margin: 30px 25px;
+}
+
+.msv-screenshot>a:hover, .msv-screenshot>a:focus{
+    color: #fff;
+    text-decoration: none;
+}
+
+.msv-screenshot-overlay{
+    height:400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+
+.msv-screenshot-overlay:hover{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0px;
+}
+
+.msv-screenshot-border{
+    border: 1px solid #fff;
+    height: 100%;
+    padding: 75px 50px;
+}
+
+.msv-screenshot-border:hover{
+    border: none;
+}
+
+.link-portfolio-title{
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+}
+
+.btn-msvhost-land{
+    padding: 20px 16px;
+    font-size: 25px;
+    border-radius: 40px;
+}
+
+.create-form{
+    background-color: rgba(247, 247, 247, 0.65);
+    margin-top: 50px;
+    margin-bottom: 150px;
+    padding: 20px 50px;
+}
+
+.create-form .form-group>label{
+    color: #014d79;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.create-layout-label{
+    color: #014d79;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.create-form .form-group>input{
+    height: 50px;
+    font-size: 18px;
+    border-radius: 0px;
+}
+
+.site-form{
+    background-color: rgba(247, 247, 247, 0.65);
+    margin-top: 50px;
+    margin-bottom: 150px;
+    padding: 50px 30px;
+}
+.site-form .form-group>label{
+    color: #014d79;
+    font-size: 20px;
+}
+.site-form .form-group>input{
+    height: 50px;
+    font-size: 18px;
+    border-radius: 0px;
+}
+
+.checkbox-msvhost-create{
+    font-size: 20px;
+    margin-right: 20px;
+    color: #40323d;
+}
+
+.checkbox-msvhost-create>input{
+    margin: 7px 0 0;
+    font-size: 16px;
+}
+
+.lang-flag{
+    height: 14px;
+    margin: 0px 0 5px;
+}
+
+.create-layout-img input{
+	position:absolute;
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+.create-layout-img input:active +.radio-layout{
+    opacity: .9;
+}
+
+.create-layout-img input:checked +.radio-layout{
+    outline: 2px solid #014d79;
+    border: 1px solid #014d79;
+}
+
+.radio-layout{
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 100%;
+    height: 140px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+}
+
+.radio-layout:hover{  
+    outline: 2px solid #014d79;
+    border: 1px solid #014d79;
+}
+
+.btn-msvhost-form{
+    padding: 15px 50px;
+    font-size: 20px;
+    border-radius: 40px;
+    margin: 15px 0 25px 0;
+}
+
+.navbar-nav>li>a.btn-default-msv{
+    line-height: 10px;
+}
+
+.navbar-default .navbar-nav>li>a.btn-default-msv{
+    color: #823099;
+}
+
+.nav>li>a.btn-default-msv{
+    padding: 15px 30px;
+}
+
+.btn-default-msv{
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 15px 30px;
+}
+
+.btn-lg{
+    font-size: 20px;
+    padding: 15px 50px;
+}
+
+button:focus, button:active, button:hover{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
