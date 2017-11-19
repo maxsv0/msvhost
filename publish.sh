@@ -52,10 +52,10 @@ echo "======================="
 
 mkdir src-temp
 cp -a src/. src-temp
-find .src-temp/ -name .DS_Store -delete
+find src-temp/ -name .DS_Store -delete
 
 echo "Creating archive.tar.gz.."
-tar -zcvf archive.tar.gz ./src-temp
+tar -zcvf archive.tar.gz -C ./src-temp .
 
 echo "Sending file to repository.."
 curl -F "file=@archive.tar.gz" -F "module=$1" -F "key=$2" -F "title=$3" -F "version=$4" -F "released=$5" -F "description=$6" http://rep.msvhost.com/api/import/
