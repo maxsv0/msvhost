@@ -86,15 +86,48 @@
 
 <install>
 	<param name="name" value="msvhost" />
-	<param name="version" value="1.0"/>
-	<param name="date" value="01.06.2016"/>
+	<param name="version" value="1.0.1"/>
+	<param name="date" value="21.11.2017"/>
 	<param name="title" value="msvhost"/>
 	<param name="description" value="msvhost"/>
-	
+	<param name="tags" value="msvhost"/>
+	<param name="author" value="max@msvhost.com"/>
+	<param name="preview" value=""/>
+
 	<dependency module="msv-core" version="1.0" />
-	
+	<dependency module="fancybox" version="1.0" />
+
 	<file dir="module" path="msvhost/msvhost.php"/>
 	<file dir="module" path="msvhost/config.xml"/>
+
+	<file dir="content" path="css/default.css"/>
+	<file dir="content" path="js/default.js"/>
+	<file dir="content" path="report-status.sh"/>
+	<file dir="content" path="server-install.sh"/>
+	<file dir="content" path="server-status.sh"/>
+	<file dir="content" path="sitograph-install.sh"/>
+	<file dir="content" path="images/bg-5.jpg"/>
+	<file dir="content" path="images/en.svg"/>
+	<file dir="content" path="images/ru.svg"/>
+	<file dir="content" path="images/layout-1.jpg"/>
+	<file dir="content" path="images/layout-2.jpg"/>
+	<file dir="content" path="images/layout-3.jpg"/>
+	<file dir="content" path="images/layout-4.jpg"/>
+	<file dir="content" path="images/layout-5.jpg"/>
+	<file dir="content" path="images/layout-6.jpg"/>
+	<file dir="content" path="images/msvhost-logo-120.png"/>
+	<file dir="template" path="msvhost/create.tpl"/>
+	<file dir="template" path="msvhost/user/homepage.tpl"/>
+	<file dir="template" path="msvhost/user/login.tpl"/>
+	<file dir="template" path="msvhost/user/settings.tpl"/>
+	<file dir="template" path="msvhost/user/singup.tpl"/>
+	<file dir="template" path="msvhost/user/user-password.tpl"/>
+	<file dir="template" path="msvhost/widget/footer.tpl"/>
+	<file dir="template" path="msvhost/widget/header.tpl"/>
+	<file dir="template" path="msvhost/widget/menu-top.tpl"/>
+	<file dir="template" path="msvhost/widget/messages.tpl"/>
+	<file dir="template" path="msvhost/widget/navigation.tpl"/>
+	<file dir="template" path="msvhost/widget/pagination.tpl"/>
 </install>
 
 
