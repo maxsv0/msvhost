@@ -121,7 +121,7 @@
 	<file dir="template" path="msvhost/user/homepage.tpl"/>
 	<file dir="template" path="msvhost/user/login.tpl"/>
 	<file dir="template" path="msvhost/user/settings.tpl"/>
-	<file dir="template" path="msvhost/user/singup.tpl"/>
+	<file dir="template" path="msvhost/user/signup.tpl"/>
 	<file dir="template" path="msvhost/user/user-password.tpl"/>
 	<file dir="template" path="msvhost/widget/footer.tpl"/>
 	<file dir="template" path="msvhost/widget/header.tpl"/>
