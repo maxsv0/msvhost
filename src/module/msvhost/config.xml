@@ -7,10 +7,11 @@
 	<param name="adminMenu" value="true"/>
 	
 	<filter url="/user/" action="MsvhostLoadUser"/>
-	
+
 	<api name="create-instance" action="ajax_create_instance"/>
 	<api name="instance-status" action="ajaxInstanceStatus"/>
-	
+	<api name="server" action="ajaxRunServer"/>
+
 	<constant name="TABLE_INSTANCE" value="instance"/>
 	<constant name="TABLE_INSTANCE_STATUS" value="instance_status"/>
 	<constant name="TABLE_SERVER" value="server"/>
@@ -86,8 +87,8 @@
 
 <install>
 	<param name="name" value="msvhost" />
-	<param name="version" value="1.0.1"/>
-	<param name="date" value="21.11.2017"/>
+	<param name="version" value="1.0.2"/>
+	<param name="date" value="26.11.2017"/>
 	<param name="title" value="msvhost"/>
 	<param name="description" value="msvhost"/>
 	<param name="tags" value="msvhost"/>

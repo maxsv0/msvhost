@@ -401,7 +401,17 @@ function server_proccess_created($instance) {
 	echo "done\n";
 }
 
-
+function ajaxRunServer($module) {
+    server_proccess("ready");
+    sleep(1);
+    server_proccess("install");
+    sleep(1);
+    server_proccess("started");
+    sleep(1);
+    server_proccess("created");
+    sleep(1);
+    server_proccess("published");
+}
 
 function ajax_create_instance() {
 	if (empty($_FILES["file"])) return false;
