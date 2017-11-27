@@ -346,14 +346,12 @@ function server_proccess_started($server) {
 		$rowInstance["status_date"] = date("Y-m-d H:i:s");
 		$rowInstance["status"] = "install";
 
-		$resultSave = db_update(TABLE_INSTANCE, $rowInstance);
+		$resultSave = db_update_row(TABLE_INSTANCE, $rowInstance);
 
-		echo "done\n";
+		echo $resultSave;
 	} else {
 		echo "skip\n";
 	}
-
-
 
 }
 
@@ -411,6 +409,8 @@ function ajaxRunServer($module) {
     server_proccess("created");
     sleep(1);
     server_proccess("published");
+
+    echo "success";
 }
 
 function ajax_create_instance() {
