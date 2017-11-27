@@ -5,7 +5,8 @@
 	<param name="activationUrl" value="*"/>
 	<param name="activationLevel" value="5"/>
 	<param name="adminMenu" value="true"/>
-	
+	<param name="adminMenuOrder" value="1"/>
+
 	<filter url="/user/" action="MsvhostLoadUser"/>
 
 	<api name="create-instance" action="ajax_create_instance"/>
@@ -122,7 +123,6 @@
 	<file dir="template" path="msvhost/user/login.tpl"/>
 	<file dir="template" path="msvhost/user/settings.tpl"/>
 	<file dir="template" path="msvhost/user/signup.tpl"/>
-	<file dir="template" path="msvhost/user/user-password.tpl"/>
 	<file dir="template" path="msvhost/widget/footer.tpl"/>
 	<file dir="template" path="msvhost/widget/header.tpl"/>
 	<file dir="template" path="msvhost/widget/menu-top.tpl"/>

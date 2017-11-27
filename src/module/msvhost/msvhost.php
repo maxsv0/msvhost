@@ -243,7 +243,7 @@ function server_proccess_ready($server) {
 		$result2 = instanceReset($instance);
 
 		$log_cont = $server["log_setup"]."\n".str_repeat("-", 10)."\nCommand:\n".$gcloud1."\nResult:\n".$result1;
-		$log_cont .= "\n".str_repeat("-", 10)."\nCommand:\n".$gcloud2."\nResult:\n".$result2;
+		$log_cont .= "\n".str_repeat("-", 10)."\nCommand:\n".$gcloud1."\nResult:\n".$result2;
 		db_update(TABLE_SERVER, "log_setup", "'".db_escape($log_cont)."'", " id = '".$server["id"]."'");
 		db_update(TABLE_SERVER, "status", "'published'", " id = '".$server["id"]."'");
 		db_update(TABLE_INSTANCE, "status", "'published'", " id = '".$instance["id"]."'");
@@ -346,7 +346,7 @@ function server_proccess_started($server) {
 		$rowInstance["status_date"] = date("Y-m-d H:i:s");
 		$rowInstance["status"] = "install";
 
-		$resultSave = db_updateRow(TABLE_INSTANCE, $rowInstance);
+		$resultSave = db_update(TABLE_INSTANCE, $rowInstance);
 
 		echo "done\n";
 	} else {
