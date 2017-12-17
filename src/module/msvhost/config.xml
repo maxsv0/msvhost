@@ -88,8 +88,8 @@
 
 <install>
 	<param name="name" value="msvhost" />
-	<param name="version" value="1.0.3"/>
-	<param name="date" value="27.11.2017"/>
+	<param name="version" value="1.0.4"/>
+	<param name="date" value="06.12.2017"/>
 	<param name="title" value="msvhost"/>
 	<param name="description" value="msvhost"/>
 	<param name="tags" value="msvhost"/>
