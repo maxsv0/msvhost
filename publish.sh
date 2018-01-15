@@ -1,80 +1,66 @@
 #!/bin/bash
+#
+# Module publishing tool for MSV Repository
+#
+# Module publishing settings:
+#   repositoryurl   - Repository URL. Default value: http://rep.msvhost.com/api/import/
+#   repositorykey   - is your developer key for accessing the repository. Default value: $1
+#                     NOTE! Do not hardcode repositorykey value. It can cause security issues.
+#   modulename      - is current module name. Default value: $2
+#   configinstall   - is a path to config.install.xml or config.xml of a current module
+#   previewfile     - is a path to module preview
+#
+#   ************* More information can be found here https://github.com/maxsv0/repository *************
+#
+repositoryurl=http://rep.msvhost.com/api/import/
+modulename=msvhost
+repositorykey=$1
+configinstall=src/module/$modulename/config.xml
+previewfile=src/content/images/module_preview_$modulename.jpg
 
-if [ -z "$1" ]
+if [ -z "$modulename" ]
   then
-    echo "Please specify module name"
+    echo "[ERROR] Missing Module name"
 	exit 0
 fi
-
-
-if [ -z "$2" ]
-  then
-    echo "Please specify repository KEY"
-	exit 0
-fi
-
-
-if [ -z "$3" ]
-  then
-    echo "Please specify Module Title"
-	exit 0
-fi
-
-
-if [ -z "$4" ]
-  then
-    echo "Please specify Module Version"
-	exit 0
-fi
-
-
-if [ -z "$5" ]
-  then
-    echo "Please specify Module Released Date"
-	exit 0
-fi
-
-
-if [ -z "$6" ]
-  then
-    echo "Please specify Module Description"
-	exit 0
-fi
-
-
-echo "Publish to  to MSV repository"
-echo "========> $1 (key :  $2)"
-echo $3
-echo $4
-echo $5
-echo $6
-echo "======================="
 
 mkdir src-temp
 cp -a src/. src-temp
 find src-temp/ -name .DS_Store -delete
 
-echo "Creating archive.zip.."
+echo "Creating $modulename.zip.."
 cd src-temp
-zip -r ../archive.zip .
+zip -r ../$modulename.zip .
 cd ..
-
-echo "#file list">filelist.txt
-echo "#module">>filelist.txt
-find src-temp/module -type f -regex "^.*$">>filelist.txt
-echo "#content">>filelist.txt
-find src-temp/content -type f -regex "^.*$">>filelist.txt
-echo "#template">>filelist.txt
-find src-temp/template -type f -regex "^.*$">>filelist.txt
-
-echo "Sending file to repository.."
-curl -F "file=@archive.zip"  -F "filelist=@filelist.txt" -F "module=$1" -F "key=$2" -F "title=$3" -F "version=$4" -F "released=$5" -F "description=$6" http://rep.msvhost.com/api/import/
-echo "Done!"
 
 echo "Removing temp files.."
 rm -R src-temp
-rm archive.zip
-rm filelist.txt
-echo "Done!"
+echo "Done! $modulename.zip created successfully"
 
+echo "=============================================="
+echo "Publish archive to MSV repository: $repositoryurl"
+
+if [ -z "$repositorykey" ]
+  then
+    echo "[ERROR] Missing repository KEY"
+	exit 0
+fi
+
+if [ ! -f $configinstall ]
+  then
+    echo "[ERROR] Missing installation config file: $configinstall"
+	exit 0
+fi
+
+if [ ! -f $previewfile ];
+	then
+      echo "[ERROR] Preview file $previewfile was not found"
+	  exit 0
+fi
+
+echo "========> Module: $modulename (key :  $repositorykey)"
+echo "Sending file to repository.."
+curl -F "file=@$modulename.zip" -F "preview=@$previewfile" -F "config=@$configinstall" -F "module=$modulename" -F "key=$repositorykey" $repositoryurl
+
+rm $modulename.zip
 exit 0
