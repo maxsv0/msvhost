@@ -7,7 +7,7 @@
         <div class="frb-group">
             <div class="frb frb-primary">
                 <input type="radio" id="architecture-1" name="architecture" value="1" checked>
-                <label for="architecture-1">
+                <label for="architecture-1" id="label-architecture-1">
                     <div class="row">
                         <div class="col-xs-offset-1 col-xs-5">
                             <a class="thumbnail" rel="fancybox" href="/content/images/msvhost-create-website-Simple.png" title="Simple Website" style="margin-bottom:0;">
@@ -17,10 +17,10 @@
                         <div class="col-xs-4">
                             <p class="frb-title">Simple Website</p>
                             <p class="frb-description">
-                                Production instance: External IP, LAMP, Sitograph CMS, PageSpeed
+                                <b>1 instance</b>
                             </p>
                             <p class="frb-description">
-                                Number of instances: 1
+                                <i>Production:</i> LAMP, Sitograph CMS, pagespeed
                             </p>
                         </div>
                         <div class="col-xs-2" style="padding-top:15px;">
@@ -29,15 +29,10 @@
                     </div>
                 </label>
             </div>
-        </div>
-    </div>
 
-
-    <div class="col-sm-10 col-sm-offset-1">
-        <div class="frb-group">
             <div class="frb frb-primary">
-                <input type="radio" id="architecture-2" name="architecture" value="2">
-                <label for="architecture-2">
+                <input type="radio" disabled="disabled" class="disabled" id="architecture-2" name="architecture" value="2">
+                <label for="architecture-2" class="disabled" >
                     <div class="row">
                         <div class="col-xs-offset-1 col-xs-5">
                             <a class="thumbnail" rel="fancybox" href="/content/images/msvhost-create-website-Production.png" title="Production Website" style="margin-bottom:0;">
@@ -45,32 +40,24 @@
                             </a>
                         </div>
                         <div class="col-xs-4">
-                            <p class="frb-title">Production Website</p>
+                            <p class="frb-title">Normal Website</p>
                             <p class="frb-description">
-                                Production instance: External IP, LAMP, Sitograph CMS, PageSpeed
+                                <b>2+ instances</b>
                             </p>
                             <p class="frb-description">
-                                Development instances: External IP, LAMP, Sitograph CMS, phpMyAdmin, FTP
+                                <i>Production:</i> LAMP, Sitograph CMS, pagespeed
                             </p>
                             <p class="frb-description">
-                                Number of instances: 2+
-                                <br>
-                                <small>any number of development instances</small>
+                                <i>Development:</i> LAMP, Sitograph CMS DEV, phpMyAdmin, FTP
                             </p>
                         </div>
                         <div class="col-xs-2" style="padding-top:15px;">
-                            <p class="frb-title">FREE</p>
+                            <p class="frb-title">$4 per month</p>
                         </div>
                     </div>
                 </label>
             </div>
-        </div>
-    </div>
 
-
-
-    <div class="col-sm-10 col-sm-offset-1">
-        <div class="frb-group">
             <div class="frb frb-primary">
                 <input type="radio" disabled="disabled" class="disabled" id="architecture-3" name="architecture" value="3">
                 <label for="architecture-3" class="disabled" >
@@ -81,22 +68,22 @@
                             </a>
                         </div>
                         <div class="col-xs-4">
-                            <p class="frb-title">High load website</p>
+                            <p class="frb-title">Production website</p>
                             <p class="frb-description">
-                                Database: MySQL
+                                <b>3+ instances</b>
                             </p>
                             <p class="frb-description">
-                                Production instances: External IP, LAMP, Sitograph CMS, PageSpeed
+                                <i>Database:</i> MySQL
                             </p>
                             <p class="frb-description">
-                                Development instances: External IP, LAMP, Sitograph CMS, phpMyAdmin, FTP
+                                <i>Production:</i> Apache, PHP, Sitograph CMS, pagespeed
                             </p>
                             <p class="frb-description">
-                                Number of instances: 3+
+                                <i>Development:</i> LAMP, 	Sitograph CMS DEV, phpMyAdmin, FTP
                             </p>
                         </div>
                         <div class="col-xs-2" style="padding-top:15px;">
-                            <p class="frb-title">$25 per month</p>
+                            <p class="frb-title">$8 per month</p>
                         </div>
                     </div>
                 </label>
@@ -104,5 +91,8 @@
         </div>
     </div>
 
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="alert alert-warning">Some options are not available yet.</div>
+    </div>
 
 </div>
