@@ -71,6 +71,4 @@ if [[ $response = *"[ERROR]"* ]]; then
 fi
 
 echo "[SUCCESS] upload successfully!"
-
-rm $modulename.zip
 exit 0
