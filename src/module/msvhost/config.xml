@@ -1,182 +1,182 @@
-<?xml version='1.0'?> 
+<?xml version='1.0'?>
 <document>
 
-<config>
-	<param name="activationUrl" value="*"/>
-	<param name="activationLevel" value="5"/>
-	<param name="adminMenu" value="true"/>
-	<param name="adminMenuOrder" value="1"/>
+	<config>
+		<param name="activationUrl" value="*"/>
+		<param name="activationLevel" value="5"/>
+		<param name="adminMenu" value="true"/>
+		<param name="adminMenuOrder" value="1"/>
 
-	<filter url="/user/" action="MsvhostLoadUser"/>
+		<filter url="/user/" action="MsvhostLoadUser"/>
 
-	<api name="create-instance" action="ajax_create_instance"/>
-	<api name="instance-status" action="ajaxInstanceStatus"/>
-	<api name="server" action="ajaxRunServer"/>
+		<api name="create-instance" action="ajax_create_instance"/>
+		<api name="instance-status" action="ajaxInstanceStatus"/>
+		<api name="server" action="ajaxRunServer"/>
 
-	<constant name="TABLE_INSTANCE" value="instance"/>
-	<constant name="TABLE_INSTANCE_STATUS" value="instance_status"/>
-	<constant name="TABLE_SERVER" value="server"/>
-	
-	<table name="server" index="id" title="name" useseo="1">
-		<field name="id" type="id"/>
-		<field name="published" type="published"/>
-		<field name="deleted" type="deleted"/>
-		<field name="author" type="author"/>
-		<field name="updated" type="updated"/>
-		<field name="lang" type="lang" listskip="1"/>
-		<field name="user_id" type="int" select-from="table:users"/>
-		<field name="instance_id" type="int" select-from="table:instance"/>
-		<field name="admin_email" type="str" listskip="1"/>
-		<field name="url" type="str"/>
-		<field name="date_create" type="date"/>
-		<field name="name" type="str" listskip="1"/>
-		<field name="domain" type="str" listskip="1"/>
-		<field name="description" type="text" listskip="1"/>
-		<field name="pic_preview" type="pic" max-width="960" max-height="800"/>
-		<field name="lang_list" type="str" listskip="1"/>
-		<field name="layout" type="str" listskip="1"/>
-		<field name="server_size" type="str" listskip="1"/>
-		<field name="server_zone" type="str" listskip="1"/>
-		<field name="ip" type="str"/>
-		<field name="ping" type="int" listskip="1"/>
-		<field name="status" type="str"/>
-		<field name="status_date" type="date"/>
-		<field name="log_create" type="text" listskip="1"/>
-		<field name="log_setup" type="text" listskip="1"/>
-		<field name="clicks" type="int" listskip="1"/>
-	</table>
-	
-	<table name="instance" index="id" title="name">
-		<field name="id" type="id"/>
-		<field name="published" type="published"/>
-		<field name="deleted" type="deleted"/>
-		<field name="author" type="author"/>
-		<field name="updated" type="updated"/>
-		<field name="lang" type="lang" listskip="1"/>
-		<field name="user_id" type="int" select-from="table:users"/>
-		<field name="server_id" type="int" select-from="table:server"/>
-		<field name="admin_email" type="str" listskip="1"/>
-		<field name="url" type="str"/>
-		<field name="name" type="str" listskip="1"/>
-		<field name="domain" type="str" listskip="1"/>
-		<field name="lang_list" type="str" listskip="1"/>
-		<field name="layout" type="str" listskip="1"/>
-		<field name="server_size" type="str" listskip="1"/>
-		<field name="server_zone" type="str" listskip="1"/>
-		<field name="ip" type="str"/>
-		<field name="status" type="str"/>
-		<field name="status_date" type="date"/>
-		<field name="log_install" type="text" listskip="1"/>
-	</table>
-	
-	<table name="instance_status" index="id" title="id">
-		<field name="id" type="id"/>
-		<field name="published" type="published"/>
-		<field name="deleted" type="deleted"/>
-		<field name="author" type="author"/>
-		<field name="updated" type="updated"/>
-		<field name="lang" type="lang"/>
-		<field name="ip" type="str"/>
-		<field name="instance" type="int" select-from="table:instance"/>
-		<field name="server" type="int" select-from="table:server"/>
-		<field name="log_report" type="text" listskip="1"/>
-		<field name="status_date" type="date" listskip="1"/>
-	</table>
-	
-</config>
+		<constant name="TABLE_INSTANCE" value="instance"/>
+		<constant name="TABLE_INSTANCE_STATUS" value="instance_status"/>
+		<constant name="TABLE_SERVER" value="server"/>
 
+		<table name="server" index="id" title="name" useseo="1">
+			<field name="id" type="id"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author"/>
+			<field name="updated" type="updated"/>
+			<field name="lang" type="lang" listskip="1"/>
+			<field name="user_id" type="int" select-from="table:users"/>
+			<field name="instance_id" type="int" select-from="table:instance"/>
+			<field name="admin_email" type="str" listskip="1"/>
+			<field name="url" type="str"/>
+			<field name="date_create" type="date"/>
+			<field name="name" type="str" listskip="1"/>
+			<field name="domain" type="str" listskip="1"/>
+			<field name="description" type="text" listskip="1"/>
+			<field name="pic_preview" type="pic" max-width="960" max-height="800"/>
+			<field name="lang_list" type="str" listskip="1"/>
+			<field name="layout" type="str" listskip="1"/>
+			<field name="server_size" type="str" listskip="1"/>
+			<field name="server_zone" type="str" listskip="1"/>
+			<field name="ip" type="str"/>
+			<field name="ping" type="int" listskip="1"/>
+			<field name="status" type="str"/>
+			<field name="status_date" type="date"/>
+			<field name="log_create" type="text" listskip="1"/>
+			<field name="log_setup" type="text" listskip="1"/>
+			<field name="clicks" type="int" listskip="1"/>
+		</table>
 
-<install>
-	<param name="name" value="msvhost" />
-	<param name="version" value="1.0.4"/>
-	<param name="date" value="06.12.2017"/>
-	<param name="title" value="msvhost"/>
-	<param name="description" value="msvhost"/>
-	<param name="tags" value="msvhost"/>
-	<param name="author" value="max@msvhost.com"/>
-	<param name="preview" value=""/>
+		<table name="instance" index="id" title="name">
+			<field name="id" type="id"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author"/>
+			<field name="updated" type="updated"/>
+			<field name="lang" type="lang" listskip="1"/>
+			<field name="user_id" type="int" select-from="table:users"/>
+			<field name="server_id" type="int" select-from="table:server"/>
+			<field name="admin_email" type="str" listskip="1"/>
+			<field name="url" type="str"/>
+			<field name="name" type="str" listskip="1"/>
+			<field name="domain" type="str" listskip="1"/>
+			<field name="lang_list" type="str" listskip="1"/>
+			<field name="layout" type="str" listskip="1"/>
+			<field name="server_size" type="str" listskip="1"/>
+			<field name="server_zone" type="str" listskip="1"/>
+			<field name="ip" type="str"/>
+			<field name="status" type="str"/>
+			<field name="status_date" type="date"/>
+			<field name="log_install" type="text" listskip="1"/>
+		</table>
 
-	<dependency module="msv-core" version="1.0" />
-	<dependency module="fancybox" version="1.0" />
+		<table name="instance_status" index="id" title="id">
+			<field name="id" type="id"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author"/>
+			<field name="updated" type="updated"/>
+			<field name="lang" type="lang"/>
+			<field name="ip" type="str"/>
+			<field name="instance" type="int" select-from="table:instance"/>
+			<field name="server" type="int" select-from="table:server"/>
+			<field name="log_report" type="text" listskip="1"/>
+			<field name="status_date" type="date" listskip="1"/>
+		</table>
 
-	<file dir="module" path="msvhost/msvhost.php"/>
-	<file dir="module" path="msvhost/config.xml"/>
-
-	<file dir="content" path="css/default.css"/>
-	<file dir="content" path="js/default.js"/>
-	<file dir="content" path="report-status.sh"/>
-	<file dir="content" path="server-install.sh"/>
-	<file dir="content" path="server-status.sh"/>
-	<file dir="content" path="sitograph-install.sh"/>
-	<file dir="content" path="images/bg-5.jpg"/>
-	<file dir="content" path="images/en.svg"/>
-	<file dir="content" path="images/ru.svg"/>
-	<file dir="content" path="images/layout-1.jpg"/>
-	<file dir="content" path="images/layout-2.jpg"/>
-	<file dir="content" path="images/layout-3.jpg"/>
-	<file dir="content" path="images/layout-4.jpg"/>
-	<file dir="content" path="images/layout-5.jpg"/>
-	<file dir="content" path="images/layout-6.jpg"/>
-	<file dir="content" path="images/msvhost-logo-120.png"/>
-	<file dir="template" path="msvhost/create.tpl"/>
-	<file dir="template" path="msvhost/user/homepage.tpl"/>
-	<file dir="template" path="msvhost/user/login.tpl"/>
-	<file dir="template" path="msvhost/user/settings.tpl"/>
-	<file dir="template" path="msvhost/user/signup.tpl"/>
-	<file dir="template" path="msvhost/widget/footer.tpl"/>
-	<file dir="template" path="msvhost/widget/header.tpl"/>
-	<file dir="template" path="msvhost/widget/menu-top.tpl"/>
-	<file dir="template" path="msvhost/widget/messages.tpl"/>
-	<file dir="template" path="msvhost/widget/navigation.tpl"/>
-	<file dir="template" path="msvhost/widget/pagination.tpl"/>
-</install>
+	</config>
 
 
+	<install>
+		<param name="name" value="msvhost" />
+		<param name="version" value="1.0.4"/>
+		<param name="date" value="26.06.2018"/>
+		<param name="title" value="msvhost"/>
+		<param name="description" value="msvhost"/>
+		<param name="tags" value="msvhost"/>
+		<param name="author" value="max@msvhost.com"/>
+		<param name="preview" value="module_preview_msvhost.jpg"/>
+
+		<dependency module="msv-core" version="1.0" />
+		<dependency module="fancybox" version="1.0" />
+
+		<file dir="module" path="msvhost/msvhost.php"/>
+		<file dir="module" path="msvhost/config.xml"/>
+
+		<file dir="content" path="css/default.css"/>
+		<file dir="content" path="js/default.js"/>
+		<file dir="content" path="report-status.sh"/>
+		<file dir="content" path="server-install.sh"/>
+		<file dir="content" path="server-status.sh"/>
+		<file dir="content" path="sitograph-install.sh"/>
+		<file dir="content" path="images/bg-5.jpg"/>
+		<file dir="content" path="images/en.svg"/>
+		<file dir="content" path="images/ru.svg"/>
+		<file dir="content" path="images/layout-1.jpg"/>
+		<file dir="content" path="images/layout-2.jpg"/>
+		<file dir="content" path="images/layout-3.jpg"/>
+		<file dir="content" path="images/layout-4.jpg"/>
+		<file dir="content" path="images/layout-5.jpg"/>
+		<file dir="content" path="images/layout-6.jpg"/>
+		<file dir="content" path="images/msvhost-logo-120.png"/>
+		<file dir="template" path="msvhost/create.tpl"/>
+		<file dir="template" path="msvhost/user/homepage.tpl"/>
+		<file dir="template" path="msvhost/user/login.tpl"/>
+		<file dir="template" path="msvhost/user/settings.tpl"/>
+		<file dir="template" path="msvhost/user/signup.tpl"/>
+		<file dir="template" path="msvhost/widget/footer.tpl"/>
+		<file dir="template" path="msvhost/widget/header.tpl"/>
+		<file dir="template" path="msvhost/widget/menu-top.tpl"/>
+		<file dir="template" path="msvhost/widget/messages.tpl"/>
+		<file dir="template" path="msvhost/widget/navigation.tpl"/>
+		<file dir="template" path="msvhost/widget/pagination.tpl"/>
+	</install>
 
 
-<locales>
-	<locale name="en">
-		<field name="module.msvhost" value="msvhost"/>
-		<field name="table.instance" value="Instances"/>
-		<field name="table.instance.id" value="ID"/>
-		<field name="table.instance.published" value="Published"/>
-		<field name="table.instance.deleted" value="Deleted"/>
-		<field name="table.instance.author" value="Author"/>
-		<field name="table.instance.updated" value="Updated"/>
-		<field name="table.instance.lang" value="Lang"/>
-		<field name="table.instance.sticked" value="Sticked"/>
-		<field name="table.instance.url" value="URL"/>
-		<field name="table.instance.date_create" value="Date"/>
-		<field name="table.instance.name" value="Name"/>
-		<field name="table.instance.user_id" value="UserID"/>
-		<field name="table.instance.admin_email" value="Admin Email"/>
-		<field name="table.instance.description" value="Short text"/>
-		<field name="table.instance.text" value="Article text"/>
-		<field name="table.instance.pic" value="Picture Big"/>
-		<field name="table.instance.pic_preview" value="Picture"/>
-		<field name="table.instance.album_id" value="Album"/>
-		<field name="table.instance.views" value="Views"/>
-		<field name="table.instance.shares" value="Shares"/>
-		<field name="table.instance.comments" value="Comments"/>
-		<field name="table.instance.seo_title" value="Page Title"/>
-		<field name="table.instance.seo_description" value="Description"/>
-		<field name="table.instance.seo_keywords" value="Keywords"/>
-		<field name="table.server" value="Servers"/>
-		<field name="table.server.id" value="ID"/>
-		<field name="table.server.published" value="Published"/>
-		<field name="table.server.deleted" value="Deleted"/>
-		<field name="table.server.author" value="Author"/>
-		<field name="table.server.updated" value="Updated"/>
-		<field name="table.server.lang" value="Lang"/>
-		<field name="table.server.url" value="URL"/>
-		<field name="table.server.article_id" value="Article"/>
-		<field name="table.server.name" value="Name"/>
-		<field name="table.server.user_id" value="UserID"/>
-		<field name="table.server.admin_email" value="Admin Email"/>
-		<field name="table.server.domain" value="Domian"/>
-		<field name="table.server.server_size" value="Server"/>
-		<field name="table.server.server_soze" value="Zone"/>
-	</locale>
-</locales>
+
+
+	<locales>
+		<locale name="en">
+			<field name="module.msvhost" value="msvhost"/>
+			<field name="table.instance" value="Instances"/>
+			<field name="table.instance.id" value="ID"/>
+			<field name="table.instance.published" value="Published"/>
+			<field name="table.instance.deleted" value="Deleted"/>
+			<field name="table.instance.author" value="Author"/>
+			<field name="table.instance.updated" value="Updated"/>
+			<field name="table.instance.lang" value="Lang"/>
+			<field name="table.instance.sticked" value="Sticked"/>
+			<field name="table.instance.url" value="URL"/>
+			<field name="table.instance.date_create" value="Date"/>
+			<field name="table.instance.name" value="Name"/>
+			<field name="table.instance.user_id" value="UserID"/>
+			<field name="table.instance.admin_email" value="Admin Email"/>
+			<field name="table.instance.description" value="Short text"/>
+			<field name="table.instance.text" value="Article text"/>
+			<field name="table.instance.pic" value="Picture Big"/>
+			<field name="table.instance.pic_preview" value="Picture"/>
+			<field name="table.instance.album_id" value="Album"/>
+			<field name="table.instance.views" value="Views"/>
+			<field name="table.instance.shares" value="Shares"/>
+			<field name="table.instance.comments" value="Comments"/>
+			<field name="table.instance.seo_title" value="Page Title"/>
+			<field name="table.instance.seo_description" value="Description"/>
+			<field name="table.instance.seo_keywords" value="Keywords"/>
+			<field name="table.server" value="Servers"/>
+			<field name="table.server.id" value="ID"/>
+			<field name="table.server.published" value="Published"/>
+			<field name="table.server.deleted" value="Deleted"/>
+			<field name="table.server.author" value="Author"/>
+			<field name="table.server.updated" value="Updated"/>
+			<field name="table.server.lang" value="Lang"/>
+			<field name="table.server.url" value="URL"/>
+			<field name="table.server.article_id" value="Article"/>
+			<field name="table.server.name" value="Name"/>
+			<field name="table.server.user_id" value="UserID"/>
+			<field name="table.server.admin_email" value="Admin Email"/>
+			<field name="table.server.domain" value="Domian"/>
+			<field name="table.server.server_size" value="Server"/>
+			<field name="table.server.server_soze" value="Zone"/>
+		</locale>
+	</locales>
 
 </document>
