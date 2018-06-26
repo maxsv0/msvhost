@@ -18,7 +18,7 @@ repositoryurl=http://rep.msvhost.com/api/import/
 modulename=msvhost
 repositorykey=$1
 configinstall=src/module/$modulename/config.xml
-previewfile=src/content/images/module_preview_$modulename.jpg
+previewfile=src/content/images/module_preview/$modulename.jpg
 
 if [ -z "$modulename" ]
   then
