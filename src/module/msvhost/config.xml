@@ -88,16 +88,17 @@
 
 	<install>
 		<param name="name" value="msvhost" />
-		<param name="version" value="1.0.4"/>
+		<param name="version" value="1.0.6"/>
 		<param name="date" value="26.06.2018"/>
 		<param name="title" value="msvhost"/>
 		<param name="description" value="msvhost"/>
 		<param name="tags" value="msvhost"/>
 		<param name="author" value="max@msvhost.com"/>
-		<param name="preview" value="module_preview_msvhost.jpg"/>
+		<param name="preview" value="images/module_preview/msvhost.jpg"/>
 
-		<dependency module="msv-core" version="1.0" />
+		<dependency module="msv-core" version="1.4" />
 		<dependency module="fancybox" version="1.0" />
+		<dependency module="paper-bootstrap-wizard" version="1.0" />
 
 		<file dir="module" path="msvhost/msvhost.php"/>
 		<file dir="module" path="msvhost/config.xml"/>
@@ -111,13 +112,11 @@
 		<file dir="content" path="images/bg-5.jpg"/>
 		<file dir="content" path="images/en.svg"/>
 		<file dir="content" path="images/ru.svg"/>
-		<file dir="content" path="images/layout-1.jpg"/>
-		<file dir="content" path="images/layout-2.jpg"/>
-		<file dir="content" path="images/layout-3.jpg"/>
-		<file dir="content" path="images/layout-4.jpg"/>
-		<file dir="content" path="images/layout-5.jpg"/>
-		<file dir="content" path="images/layout-6.jpg"/>
 		<file dir="content" path="images/msvhost-logo-120.png"/>
+		<file dir="content" path="images/module_preview/msvhost.jpg"/>
+		<file dir="content" path="images/website_type_normal.jpg"/>
+		<file dir="content" path="images/website_type_production.jpg"/>
+		<file dir="content" path="images/website_type_simple.jpg"/>
 		<file dir="template" path="msvhost/create.tpl"/>
 		<file dir="template" path="msvhost/user/homepage.tpl"/>
 		<file dir="template" path="msvhost/user/login.tpl"/>
