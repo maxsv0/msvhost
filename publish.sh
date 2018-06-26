@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e 
+
 #
 # Module publishing tool for MSV Repository
 #
