@@ -88,15 +88,15 @@
 
 	<install>
 		<param name="name" value="msvhost" />
-		<param name="version" value="1.0.6"/>
-		<param name="date" value="26.06.2018"/>
+		<param name="version" value="1.0.7"/>
+		<param name="date" value="27.06.2018"/>
 		<param name="title" value="msvhost"/>
 		<param name="description" value="msvhost"/>
 		<param name="tags" value="msvhost"/>
 		<param name="author" value="max@msvhost.com"/>
 		<param name="preview" value="images/module_preview/msvhost.jpg"/>
 
-		<dependency module="msv-core" version="1.4" />
+		<dependency module="msv-core" version="1.5" />
 		<dependency module="fancybox" version="1.0" />
 		<dependency module="paper-bootstrap-wizard" version="1.0" />
 
