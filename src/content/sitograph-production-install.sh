@@ -39,10 +39,8 @@ service apache2 restart
 rm /var/www/html/index.html
 rm mod-pagespeed-*.deb
 
-# Download latest version of Sitograph and upzip folder
-wget https://github.com/maxsv0/sitograph/archive/v1.1.zip -O sitograph-v1.1.zip
-unzip sitograph-v1.1.zip
-cd sitograph-1.1
+git clone https://github.com/maxsv0/sitograph
+cd sitograph
 
 # Copy Sitograph files and enable Apache configuration
 sh scripts/install.sh /var/www/html
