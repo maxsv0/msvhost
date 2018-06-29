@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<document>
+
+<locales>
+	<locale name="en">
+		<field name="module.msvhost" value="msvhost"/>
+		<field name="table.instance" value="Instances"/>
+		<field name="table.instance.id" value="ID"/>
+		<field name="table.instance.published" value="Published"/>
+		<field name="table.instance.deleted" value="Deleted"/>
+		<field name="table.instance.author" value="Author"/>
+		<field name="table.instance.updated" value="Updated"/>
+		<field name="table.instance.lang" value="Lang"/>
+		<field name="table.instance.sticked" value="Sticked"/>
+		<field name="table.instance.url" value="URL"/>
+		<field name="table.instance.date_create" value="Date"/>
+		<field name="table.instance.name" value="Name"/>
+		<field name="table.instance.user_id" value="UserID"/>
+		<field name="table.instance.admin_email" value="Admin Email"/>
+		<field name="table.instance.description" value="Short text"/>
+		<field name="table.instance.text" value="Article text"/>
+		<field name="table.instance.pic" value="Picture Big"/>
+		<field name="table.instance.pic_preview" value="Picture"/>
+		<field name="table.instance.album_id" value="Album"/>
+		<field name="table.instance.views" value="Views"/>
+		<field name="table.instance.shares" value="Shares"/>
+		<field name="table.instance.comments" value="Comments"/>
+		<field name="table.instance.seo_title" value="Page Title"/>
+		<field name="table.instance.seo_description" value="Description"/>
+		<field name="table.instance.seo_keywords" value="Keywords"/>
+		<field name="table.server" value="Servers"/>
+		<field name="table.server.id" value="ID"/>
+		<field name="table.server.published" value="Published"/>
+		<field name="table.server.deleted" value="Deleted"/>
+		<field name="table.server.author" value="Author"/>
+		<field name="table.server.updated" value="Updated"/>
+		<field name="table.server.lang" value="Lang"/>
+		<field name="table.server.url" value="URL"/>
+		<field name="table.server.article_id" value="Article"/>
+		<field name="table.server.name" value="Name"/>
+		<field name="table.server.user_id" value="UserID"/>
+		<field name="table.server.admin_email" value="Admin Email"/>
+		<field name="table.server.domain" value="Domian"/>
+		<field name="table.server.server_size" value="Server"/>
+		<field name="table.server.server_soze" value="Zone"/>
+	</locale>
+</locales>
+</document>
