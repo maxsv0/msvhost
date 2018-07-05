@@ -1,6 +1,10 @@
-{include file="$themePath/widget/header.tpl"}
+{include file="$themeDefaultPath/widget/header_blank.tpl"}
 
-
+<div class="container top-menu">
+    <div class="row">
+        {include file="$themePath/widget/menu-top.tpl"}
+    </div>
+</div>
 
 
 <div class="container">
@@ -89,4 +93,4 @@
     </div>
 </div>
 
-{include file="$themePath/widget/footer.tpl"}
+{include file="$themeDefaultPath/widget/footer_blank.tpl"}

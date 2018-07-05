@@ -3,26 +3,29 @@
 
 <install>
 	<param name="name" value="msvhost" />
-	<param name="version" value="1.0.8"/>
-	<param name="date" value="29.06.2018"/>
+	<param name="version" value="1.0.9"/>
+	<param name="date" value="05.07.2018"/>
 	<param name="title" value="msvhost"/>
-	<param name="description" value="msvhost"/>
+	<param name="description" value="MSVHOST website builder"/>
 	<param name="tags" value="msvhost"/>
 	<param name="author" value="max@msvhost.com"/>
 	<param name="preview" value="images/module_preview/msvhost.jpg"/>
+
+	<param name="installHook" value="Install_Msvhost"/>
 
 	<dependency module="msv-core" version="1.5" />
 	<dependency module="fancybox" version="1.0" />
 	<dependency module="paper-bootstrap-wizard" version="1.0" />
 
 	<file dir="module" path="msvhost/msvhost.php"/>
+	<file dir="module" path="msvhost/msvhost.install.php"/>
 	<file dir="module" path="msvhost/msvhost.functions.php"/>
 	<file dir="module" path="msvhost/msvhost.api.php"/>
 	<file dir="module" path="msvhost/config.xml"/>
 	<file dir="module" path="msvhost/config.locales.xml"/>
 	<file dir="module" path="msvhost/config.install.xml"/>
-	<file dir="content" path="css/default.css"/>
-	<file dir="content" path="js/default.js"/>
+	<file dir="content" path="css/msvhost.css"/>
+	<file dir="content" path="js/msvhost.js"/>
 	<file dir="content" path="sitograph-install.sh"/>
 	<file dir="content" path="sitograph-production.sh"/>
 	<file dir="content" path="sitograph-production-install.sh"/>
@@ -35,6 +38,8 @@
 	<file dir="content" path="images/website_type_production.jpg"/>
 	<file dir="content" path="images/website_type_simple.jpg"/>
 	<file dir="template" path="msvhost/create.tpl"/>
+	<file dir="template" path="msvhost/index.tpl"/>
+	<file dir="template" path="msvhost/main.tpl"/>
 	<file dir="template" path="msvhost/user/homepage.tpl"/>
 	<file dir="template" path="msvhost/user/login.tpl"/>
 	<file dir="template" path="msvhost/user/settings.tpl"/>
