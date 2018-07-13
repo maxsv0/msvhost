@@ -16,25 +16,37 @@
             <tr>
                 <td>Sitograph CMS</td>
                 <td>1</td>
-                <td>free</td>
+                <td>0</td>
                 <td>0</td>
             </tr>
             <tr>
-                <td id="text_website_type">Sitograph Default Website</td>
+                <td id="confirm_website_type">Website - Theme Default</td>
                 <td>1</td>
-                <td>free</td>
-                <td>0</td>
+                <td id="confirm_wtype_price1">44$</td>
+                <td id="confirm_wtype_price2">44$</td>
             </tr>
             <tr>
-                <td id="text_architecture">Normal website architecture</td>
+                <td id="confirm_website_architecture">Production Instance</td>
                 <td>1</td>
-                <td>free</td>
-                <td>0</td>
+                <td>1$</td>
+                <td>1$</td>
+            </tr>
+            <tr>
+                <td id="confirm_website_size">Instance f1-micro</td>
+                <td>1</td>
+                <td>$4.49</td>
+                <td>$4.49</td>
+            </tr>
+            <tr>
+                <td id="confirm_website_disk">Disk storage</td>
+                <td>10 Gb</td>
+                <td>$0.026</td>
+                <td>$0.26</td>
             </tr>
 
             <tr>
                 <td colspan="3" class="text-right"><b>Total</b></td>
-                <td><b>$0</b></td>
+                <td><b id="wprice_total">$49.75</b></td>
             </tr>
         </table>
 

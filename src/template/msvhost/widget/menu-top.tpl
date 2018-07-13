@@ -1,4 +1,4 @@
-{assign var="items" value=$menu['top']}
+{assign var="items" value=$menu['user']}
 
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color: rgba(255,255,255,0.9);">
     <div class="container-fluid">
@@ -22,7 +22,12 @@
              </ul>
              <ul class="nav navbar-nav navbar-right">
              {if !$user.id}
-                <li style="margin: 17px;"><a class="btn btn-default btn-default-msv" href="/login/" role="button">Sign in</a></li>
+                <li style="margin: 17px;">
+                    <a class="btn btn-default" href="/login/" role="button">Sign in</a>
+                </li>
+                <li style="margin: 17px;">
+                    <a href="{$google_user_auth_url}" style="padding:0;"><img src="{$contentUrl}/images/btn_google_signin.png" title="{_t("users.form.sign_in_with_google")}" class="img-responsive" style="height:40px;"></a>
+                </li>
              {else}
               	<li style="margin: 17px;"><a class="btn btn-default btn-default-msv" href="#" data-toggle="collapse" data-target="#submenu-user">{$user.email} <span class="caret"></span></a>
               	

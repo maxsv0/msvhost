@@ -1,4 +1,4 @@
-{include file="$themeDefaultPath/widget/header_blank.tpl"}
+{include file="$themePath/widget/header.tpl"}
 
 <div class="container top-menu">
 	<div class="row">
@@ -18,4 +18,4 @@
 {/if}
 
 
-{include file="$themeDefaultPath/widget/footer_blank.tpl"}
+{include file="$themePath/widget/footer.tpl"}

@@ -1,6 +1,28 @@
+.table-highlight {
+    overflow: hidden;
+}
+.table-highlight tr:hover {
+    background-color: #ffa;
+}
+.table-highlight td, .table-highlight th {
+    position: relative;
+}
+.table-highlight td:hover::after,
+.table-highlight th:hover::after {
+    content: "";
+    position: absolute;
+    background-color: #ffa;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
+}
 
 
-
+.setup_reqired {
+    font-style: italic;
+}
 
 
 .frb-group {
