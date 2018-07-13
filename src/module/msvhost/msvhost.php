@@ -36,6 +36,10 @@ if (!empty($_REQUEST["instance_delete"]) && !empty($user_id)) {
 if (!empty($_REQUEST["finish"])) {
 	$str = implode("\n", $_REQUEST);
 
+	if (empty($user_id)) {
+		msv_message_error("Please login to create website");
+	}
+
 	if (empty($_REQUEST["websiteurl"])) {
 		msv_message_error("Please enter domain address");
 	}
@@ -53,7 +57,8 @@ if (!empty($_REQUEST["finish"])) {
         $website_name = $_REQUEST["websiteurl"];
         $website_email = $_REQUEST["email"];
         $website_pass = msv_generate_password();
-        $website_url = strtolower($_REQUEST["websiteurl"]).".msvhost.com";
+        $website_domain = strtolower($_REQUEST["websiteurl"]).".msvhost.com";
+        $website_url = "http://".$website_domain."/";
 		$website_lang = $_REQUEST["language"];
 		$website_type = $_REQUEST["website_type"];
 		$website_architecture = $_REQUEST["architecture"];
@@ -76,6 +81,7 @@ if (!empty($_REQUEST["finish"])) {
 			"admin_email" => $website_email,
 			"admin_pass" => $website_pass,
 			"name" => $website_name,
+			"domain" => $website_domain,
 			"url" => $website_url,
 			"type" => $website_type,
 			"arch" => $website_architecture,
@@ -85,7 +91,9 @@ if (!empty($_REQUEST["finish"])) {
 			"lang" => $website_lang,
 			"ga_track" => $ga_track,
 			"ga_property" => $ga_property,
-			"status" => "created",
+			"status" => "working",
+			"status_date" => date("Y-m-d H:i:s"),
+			"public" => 0,
 		);
 
 		$result = db_add(TABLE_INSTANCE, $item);

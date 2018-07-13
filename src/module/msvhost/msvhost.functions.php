@@ -32,6 +32,10 @@ function instanceReset($instanceRow) {
 	return $result;
 }
 
+function MsvhostLoadInstanceList($module) {
+    $resultQuery = db_get_list(TABLE_INSTANCE, "`public` > 0", "`date_create` desc");
+    msv_assign_data("instance_list", $resultQuery["data"]);
+}
 
 function MsvhostLoadUser($module) {
 	$rowUser = msv_get("website.user");
@@ -44,37 +48,35 @@ function MsvhostLoadUser($module) {
 	if ($resultQuery["ok"] && !empty($resultQuery["data"])) {
 		$list = array();
 		foreach ($resultQuery["data"] as $row) {
-			if ($row["status"] == "created") {
-				$status_pers = 17;
-			} elseif ($row["status"] == "starting") {
-				$status_pers = 17+13*1;
-			} elseif ($row["status"] == "started") {
-				$status_pers = 17+13*2;
-			} elseif ($row["status"] == "install") {
-				$status_pers = 17+13*3;
-			} elseif ($row["status"] == "installing") {
-				$status_pers = 17+13*4;
-			} elseif ($row["status"] == "ready") {
-				$status_pers = 17+13*5;
-			} elseif ($row["status"] == "published") {
-				$status_pers = 17+13*6;
-			} elseif ($row["status"] == "online") {
+
+		    $tm = time() - strtotime($row["date_create"]);
+			if ($row["status"] == "working") {
+				$status_pers = 38 + ceil(5*(min($tm, 15)/15));
+			} elseif ($row["status"] == "create-success") {
+				$status_pers = 43 + ceil(57*(min($tm, 200)/200));
+			} elseif ($row["status"] == "install-success") {
 				$status_pers = 100;
-			} elseif ($row["status"] == "fail-create" || $row["status"] == "deleting") {
+			} elseif ($row["status"] == "create-fail" || $row["status"] == "install-fail") {
 				$status_pers = 0;
 			}
 			$row["status_pers"] = $status_pers;
 			$list[] = $row;
 		}
 
-		msv_assign_data("user_server", $list);
+		msv_assign_data("user_instance", $list);
 	}
-
 }
 
 
 function msvhost_create_instance($rowInfo) {
     $jenkinsAuth = msv_get_config("jenkins_auth");
+
+    $sitographImageName = "";
+    if ($rowInfo["arch"] === "warch1") {
+        $sitographImageName = msv_get_config("sitograph_image_production");
+    } else if ($rowInfo["arch"] === "warch2") {
+        $sitographImageName = msv_get_config("sitograph_image_development");
+    }
 
     $jobUrl = "";
     if ($rowInfo["type"] === "wtype1") {
@@ -104,7 +106,7 @@ function msvhost_create_instance($rowInfo) {
             array("name" => "WSIZE", "value" => $rowInfo["disk"]."GB"),
             array("name" => "WTRACKID", "value" => $rowInfo["ga_track"]),
             array("name" => "WPROPERTY", "value" => $rowInfo["ga_property"]),
-            array("name" => "WIMAGE", "value" => "sitograph-image-3"),
+            array("name" => "WIMAGE", "value" => $sitographImageName),
             array("name" => "WLANG", "value" => $rowInfo["lang"]),
         ))))));
 
