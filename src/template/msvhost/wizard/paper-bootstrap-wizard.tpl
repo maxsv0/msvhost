@@ -15,6 +15,16 @@
                             <p class="category">Create a website, blog or landing page right now.</p>
                         </div>
 
+                    {if $website_created}
+
+                        {include file="$themePath/wizard/success.tpl"}
+
+                    {elseif $website_email == ''}
+
+                        {include file="$themePath/wizard/login-required.tpl"}
+
+                    {else}
+
                         <div class="wizard-navigation">
                             <div class="progress-with-circle">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" style="width: 21%;"></div>
@@ -111,6 +121,7 @@
                             </div>
                             <div class="clearfix"></div>
                         </div>
+                    {/if}
                     </form>
                 </div>
             </div> <!-- wizard container -->

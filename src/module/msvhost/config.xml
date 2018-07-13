@@ -9,42 +9,8 @@
 
 	<filter url="/user/" action="MsvhostLoadUser"/>
 
-	<api name="create-instance" action="ajax_create_instance"/>
-	<api name="instance-status" action="ajaxInstanceStatus"/>
-	<api name="server" action="ajaxRunServer"/>
-
 	<constant name="TABLE_INSTANCE" value="instance"/>
 	<constant name="TABLE_INSTANCE_STATUS" value="instance_status"/>
-	<constant name="TABLE_SERVER" value="server"/>
-
-	<table name="server" index="id" title="name" useseo="1">
-		<field name="id" type="id"/>
-		<field name="published" type="published"/>
-		<field name="deleted" type="deleted"/>
-		<field name="author" type="author"/>
-		<field name="updated" type="updated"/>
-		<field name="lang" type="lang" listskip="1"/>
-		<field name="user_id" type="int" select-from="table:users"/>
-		<field name="instance_id" type="int" select-from="table:instance"/>
-		<field name="admin_email" type="str" listskip="1"/>
-		<field name="url" type="str"/>
-		<field name="date_create" type="date"/>
-		<field name="name" type="str" listskip="1"/>
-		<field name="domain" type="str" listskip="1"/>
-		<field name="description" type="text" listskip="1"/>
-		<field name="pic_preview" type="pic" max-width="960" max-height="800"/>
-		<field name="lang_list" type="str" listskip="1"/>
-		<field name="layout" type="str" listskip="1"/>
-		<field name="server_size" type="str" listskip="1"/>
-		<field name="server_zone" type="str" listskip="1"/>
-		<field name="ip" type="str"/>
-		<field name="ping" type="int" listskip="1"/>
-		<field name="status" type="str"/>
-		<field name="status_date" type="date"/>
-		<field name="log_create" type="text" listskip="1"/>
-		<field name="log_setup" type="text" listskip="1"/>
-		<field name="clicks" type="int" listskip="1"/>
-	</table>
 
 	<table name="instance" index="id" title="name">
 		<field name="id" type="id"/>
@@ -54,15 +20,18 @@
 		<field name="updated" type="updated"/>
 		<field name="lang" type="lang" listskip="1"/>
 		<field name="user_id" type="int" select-from="table:users"/>
-		<field name="server_id" type="int" select-from="table:server"/>
+		<field name="date_create" type="date"/>
 		<field name="admin_email" type="str" listskip="1"/>
-		<field name="url" type="str"/>
 		<field name="name" type="str" listskip="1"/>
-		<field name="domain" type="str" listskip="1"/>
-		<field name="lang_list" type="str" listskip="1"/>
-		<field name="layout" type="str" listskip="1"/>
-		<field name="server_size" type="str" listskip="1"/>
-		<field name="server_zone" type="str" listskip="1"/>
+		<field name="url" type="str"/>
+		<field name="type" type="str"/>
+		<field name="arch" type="str"/>
+		<field name="size" type="str"/>
+		<field name="zone" type="str"/>
+		<field name="disk" type="str"/>
+		<field name="lang" type="str"/>
+		<field name="ga_track" type="str"/>
+		<field name="ga_property" type="str"/>
 		<field name="ip" type="str"/>
 		<field name="status" type="str"/>
 		<field name="status_date" type="date"/>
@@ -78,7 +47,6 @@
 		<field name="lang" type="lang"/>
 		<field name="ip" type="str"/>
 		<field name="instance" type="int" select-from="table:instance"/>
-		<field name="server" type="int" select-from="table:server"/>
 		<field name="log_report" type="text" listskip="1"/>
 		<field name="status_date" type="date" listskip="1"/>
 	</table>

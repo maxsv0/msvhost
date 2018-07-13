@@ -1,10 +1,12 @@
 
+<div class="container">
+    <div class="row">
+        <p class="col-sm-12">{$theme_copyright_text}</p>
+    </div>
+</div>
 
-<footer class="footer">
-
-</footer>
+</body>
 
 {$htmlFooter}
 
-</body>
 </html>

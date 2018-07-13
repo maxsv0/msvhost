@@ -3,8 +3,8 @@
 
 <install>
 	<param name="name" value="msvhost" />
-	<param name="version" value="1.0.9"/>
-	<param name="date" value="05.07.2018"/>
+	<param name="version" value="1.0.10"/>
+	<param name="date" value="12.07.2018"/>
 	<param name="title" value="msvhost"/>
 	<param name="description" value="MSVHOST website builder"/>
 	<param name="tags" value="msvhost"/>
@@ -24,6 +24,8 @@
 	<file dir="module" path="msvhost/config.xml"/>
 	<file dir="module" path="msvhost/config.locales.xml"/>
 	<file dir="module" path="msvhost/config.install.xml"/>
+	<file dir="module" path="msvhost/doc/en-email-notify.html"/>
+	<file dir="module" path="msvhost/doc/en-email-admin-notify.html"/>
 	<file dir="content" path="css/msvhost.css"/>
 	<file dir="content" path="js/msvhost.js"/>
 	<file dir="content" path="sitograph-install.sh"/>
@@ -54,6 +56,8 @@
 	<file dir="template" path="msvhost/wizard/confirm.tpl"/>
 	<file dir="template" path="msvhost/wizard/deployment.tpl"/>
 	<file dir="template" path="msvhost/wizard/general.tpl"/>
+	<file dir="template" path="msvhost/wizard/success.tpl"/>
+	<file dir="template" path="msvhost/wizard/login-required.tpl"/>
 	<file dir="template" path="msvhost/wizard/paper-bootstrap-wizard.tpl"/>
 	<file dir="template" path="msvhost/wizard/website_type.tpl"/>
 </install>

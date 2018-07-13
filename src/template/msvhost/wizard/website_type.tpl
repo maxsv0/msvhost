@@ -1,117 +1,98 @@
 <h4 class="info-text">Choose a type of your new website</h4>
 <div class="row">
-    <div class="col-sm-10 col-sm-offset-1">
+    <div class="col-sm-12">
 
-        <div class="frb-group">
-            <div class="frb frb-primary">
-                <input type="radio" id="website_type-1" name="website_type" value="1">
-                <label for="website_type-1" id="label-website_type-1">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-3">
-                            <img class="img-responsive" src="/content/articles/2018/06/5b1f96ee5e8d1-pic_preview.jpg">
-                        </div>
-                        <div class="col-xs-6">
-                            <p class="frb-title">Empty Sitograph CMS</p>
-                            <p class="frb-description">
-                                <i>Features:</i> installation required
-                            </p>
-                            <p class="frb-description">
-                                <i>CMS:</i> Sitograph CMS v.1.1
-                            </p>
-                            <p class="frb-description">
-                                <i>Theme:</i> not installed
-                            </p>
-                        </div>
-                        <div class="col-xs-2" style="padding-top:15px;">
-                            <p class="frb-title">FREE</p>
-                        </div>
-                    </div>
-                </label>
-            </div>
-
-
-            <div class="frb frb-primary">
-                <input type="radio" id="website_type-2" name="website_type" value="2" checked>
-                <label for="website_type-2" id="label-website_type-2">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-3">
-                            <img class="img-responsive" src="/content/articles/2018/06/5b1f96eea2553-pic_preview.jpg">
-                        </div>
-                        <div class="col-xs-6">
-                            <p class="frb-title">Sitograph Default Website</p>
-                            <p class="frb-description">
-                                <i>Features:</i> API, Blog, Gallery, Feedback, mailing, analytics
-                            </p>
-                            <p class="frb-description">
-                                <i>CMS:</i> Sitograph CMS v.1.1
-                            </p>
-                            <p class="frb-description">
-                                <i>Theme:</i> MSV Default v.1.3.8
-                            </p>
-                        </div>
-                        <div class="col-xs-2" style="padding-top:15px;">
-                            <p class="frb-title">FREE</p>
-                        </div>
-                    </div>
-                </label>
-            </div>
-
-
-            <div class="frb frb-primary">
-                <input type="radio" disabled="disabled" class="disabled" id="website_type-3" name="website_type" value="3">
-                <label for="website_type-3" class="disabled">
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-3">
-                            <img class="img-responsive" src="/content/articles/2018/06/5b1f96eea2553-pic_preview.jpg">
-                        </div>
-                        <div class="col-xs-6">
-                            <p class="frb-title">E-commerce website</p>
-                            <p class="frb-description">
-                                <i>Features:</i> API, Payments, Blog, Gallery, Feedback, mailing, analytics
-                            </p>
-                            <p class="frb-description">
-                                <i>CMS:</i> Sitograph CMS v.1.1
-                            </p>
-                            <p class="frb-description">
-                                <i>Theme:</i> MSV Catalog v.1.2
-                            </p>
-                        </div>
-                        <div class="col-xs-2" style="padding-top:15px;">
-                            <p class="frb-title">$24 per month</p>
-                        </div>
-                    </div>
-                </label>
-            </div>
-
-            <div class="frb frb-primary">
-                <input type="radio" disabled="disabled" class="disabled"  id="website_type-4" name="website_type" value="4">
-                <label for="website_type-4" class="disabled" >
-                    <div class="row">
-                        <div class="col-xs-offset-1 col-xs-3">
-                            <img class="img-responsive" src="/content/images/feedback/feedback_1.jpg">
-                        </div>
-                        <div class="col-xs-6">
-                            <p class="frb-title">Online Classroom</p>
-                            <p class="frb-description">
-                                <i>Features:</i> API, Classroom, Payments, Blog, Gallery, Feedback, mailing, analytics
-                            </p>
-                            <p class="frb-description">
-                                <i>CMS:</i> Sitograph CMS v.1.1
-                            </p>
-                            <p class="frb-description">
-                                <i>Theme:</i> MSV Classroom v.1.1
-                            </p>
-                        </div>
-                        <div class="col-xs-2" style="padding-top:15px;">
-                            <p class="frb-title">$170 per month</p>
-                        </div>
-                    </div>
-                </label>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-8 col-sm-offset-2">
-        <div class="alert alert-warning">Some options are not available yet.</div>
+        <table class="table table-highlight" id="table_wtype">
+            <tr>
+                <td width="20%"class="table-title">Website</td>
+                <td width="20%" style="background:#f3bb45;" onclick="table_type(1);">
+                    <p style="min-height: 55px; font-size:21px;" id="title_wtype1">Sitograph Empty</p>
+                    <img src="https://www.sitograph.com/content/gallery_photos/2018/03/5abf7eb47c83a-pic.jpg" class="img-thumbnail">
+                </td>
+                <td width="20%" style="background:#f3bb45;" onclick="table_type(2);">
+                    <p style="min-height: 55px; font-size:21px;" id="title_wtype2">Theme Default</p>
+                    <img src="http://rep.msvhost.com/content/articles/2018/07/5b43adb4e2654-pic.jpg" class="img-thumbnail"
+                </td>
+                <td width="20%" style="background:#f3bb45;;" onclick="table_type(3);">
+                    <p style="min-height: 55px; font-size:21px;" id="title_wtype3">Theme Sitograph</p>
+                    <img src="http://rep.msvhost.com/content/images/module_preview/theme-sitograph.jpg" class="img-thumbnail"
+                </td>
+                <td width="20%" style="background:#f3bb45;" onclick="table_type(4);">
+                    <p class="text-muted" style="min-height: 55px; font-size:21px;" id="title_wtype4">E-commerce</p>
+                    <img src="http://rep.msvhost.com/content/images/module_preview/theme-default.jpg" class="img-thumbnail"
+                </td>
+            </tr>
+            <tr>
+                <td class="table-title">Sitograph CMS</td>
+                <td class="text-center" onclick="table_type(1);"><span class="setup_reqired">setup required</span></td>
+                <td class="text-center" onclick="table_type(2);"><b>Yes</b></td>
+                <td class="text-center" onclick="table_type(3);"><b>Yes</b></td>
+                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+            </tr>
+            <tr>
+                <td class="table-title">Design Theme</td>
+                <td class="text-center" onclick="table_type(1);"><span class="setup_reqired">setup required</span></td>
+                <td onclick="table_type(2);"><b>Theme Default</b></td>
+                <td onclick="table_type(3);"><b>Theme Sitograph</b></td>
+                <td class="text-muted" onclick="table_type(4);"><b>Theme Catalog</b></td>
+            </tr>
+            <tr>
+                <td class="table-title">Website Modules<br><small>Blog, Feedback, Gallery, Site search</small></td>
+                <td class="text-center" onclick="table_type(1);"><span class=setup_reqired">setup required</span></td>
+                <td class="text-center" onclick="table_type(2);"><b>Yes</b></td>
+                <td class="text-center" onclick="table_type(3);"><b>Yes</b></td>
+                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+            </tr>
+            <tr>
+                <td class="table-title">Google API</td>
+                <td class="text-center" onclick="table_type(1);">No</td>
+                <td class="text-center" onclick="table_type(2);"><b>Yes</b></td>
+                <td class="text-center" onclick="table_type(3);"><b>Yes</b></td>
+                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+            </tr>
+            <tr>
+                <td class="table-title">Email service</td>
+                <td class="text-center" onclick="table_type(1);">No</td>
+                <td class="text-center" onclick="table_type(2);"><b>Yes</b></td>
+                <td class="text-center" onclick="table_type(3);"><b>Yes</b></td>
+                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+            </tr>
+            <tr>
+                <td class="table-title">Cart and payments</td>
+                <td class="text-center" onclick="table_type(1);">No</td>
+                <td class="text-center" onclick="table_type(2);">No</td>
+                <td class="text-center" onclick="table_type(3);">No</td>
+                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+            </tr>
+            <tr>
+                <td class="table-title">Email marketing</td>
+                <td class="text-center" onclick="table_type(1);">No</td>
+                <td class="text-center" onclick="table_type(2);">No</td>
+                <td class="text-center" onclick="table_type(3);">No</td>
+                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+            </tr>
+            <tr class="text-center">
+                <td class="table-title">Price</td>
+                <td onclick="table_type(1);">
+                    <p style="font-size:16px;">19$ per month</p>
+                </td>
+                <td onclick="table_type(2);">
+                    <p style="font-size:16px;">44$ per month</p>
+                </td>
+                <td onclick="table_type(3);">
+                    <p style="font-size:16px;">44$ per month</p>
+                </td>
+                <td onclick="table_type(4);">
+                    <p class="text-muted" style="font-size:16px;">99$ per month</p>
+                </td>
+            </tr>
+            <tr class="text-center">
+                <td></td>
+                <td onclick="table_type(1);"><input type="radio" name="website_type" value="wtype1" id="wtype1"></td>
+                <td onclick="table_type(2);"><input type="radio" name="website_type" value="wtype2" id="wtype2"></td>
+                <td onclick="table_type(3);"><input type="radio" name="website_type" value="wtype3" id="wtype3"></td>
+                <td onclick="table_type(4);"><input type="radio" name="website_type" value="wtype4" id="wtype4" disabled="disabled"></td>
+            </tr>
+        </table>
     </div>
 </div>
