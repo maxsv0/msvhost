@@ -8,6 +8,9 @@
 	<param name="adminMenuOrder" value="1"/>
 
 	<filter url="/user/" action="MsvhostLoadUser"/>
+	<filter url="/" action="MsvhostLoadInstanceList"/>
+
+	<api name="instance-status" action="ajaxInstanceStatus"/>
 
 	<constant name="TABLE_INSTANCE" value="instance"/>
 	<constant name="TABLE_INSTANCE_STATUS" value="instance_status"/>
@@ -23,18 +26,21 @@
 		<field name="date_create" type="date"/>
 		<field name="admin_email" type="str" listskip="1"/>
 		<field name="name" type="str" listskip="1"/>
-		<field name="url" type="str"/>
+		<field name="domain" type="str"/>
+		<field name="url" type="str" listskip="1"/>
 		<field name="type" type="str"/>
 		<field name="arch" type="str"/>
 		<field name="size" type="str"/>
-		<field name="zone" type="str"/>
-		<field name="disk" type="str"/>
+		<field name="zone" type="str" listskip="1"/>
+		<field name="disk" type="str" listskip="1"/>
 		<field name="lang" type="str"/>
-		<field name="ga_track" type="str"/>
-		<field name="ga_property" type="str"/>
+		<field name="ga_track" type="str" listskip="1"/>
+		<field name="ga_property" type="str" listskip="1"/>
 		<field name="ip" type="str"/>
-		<field name="status" type="str"/>
-		<field name="status_date" type="date"/>
+		<field name="status" type="str" listskip="1"/>
+		<field name="status_date" type="date" listskip="1"/>
+		<field name="public" type="bool"/>
+		<field name="preview" type="pic" max-width="800" max-height="800" listskip="1"/>
 		<field name="log_install" type="text" listskip="1"/>
 	</table>
 

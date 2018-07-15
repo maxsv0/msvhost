@@ -11,22 +11,21 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand msv-land-logo" href="{$home.en}">MSVHost</a>
+
+      <span class="label label-info" style="margin-top: 10px;">BETA</span>
     </div>
         
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="msv-land-slogan">Time to be online</li>    
-             </ul>    
-            <ul class="nav navbar-nav">
-                <li  style="position:absolute;margin-left: auto;margin-right: auto;left: 0;right: 0; top:17px;width:150px;"><a class="btn btn-default btn-default-msv"  href="/create/">Start Trial</a></li>    
+                <li style="position:absolute;margin-left: auto;margin-right: auto;left: 0;right: 0; top:17px;width:150px;"><a class="btn btn-default btn-default-msv"  href="/create/">Start Trial</a></li>
              </ul>
              <ul class="nav navbar-nav navbar-right">
              {if !$user.id}
                 <li style="margin: 17px;">
                     <a class="btn btn-default" href="/login/" role="button">Sign in</a>
                 </li>
-                <li style="margin: 17px;">
-                    <a href="{$google_user_auth_url}" style="padding:0;"><img src="{$contentUrl}/images/btn_google_signin.png" title="{_t("users.form.sign_in_with_google")}" class="img-responsive" style="height:40px;"></a>
+                <li>
+                    <a href="{$google_user_auth_url}" style="padding: 16px 10px;"><img src="{$contentUrl}/images/btn_google_signin.png" title="{_t("users.form.sign_in_with_google")}" class="img-responsive" style="height:40px;"></a>
                 </li>
              {else}
               	<li style="margin: 17px;"><a class="btn btn-default btn-default-msv" href="#" data-toggle="collapse" data-target="#submenu-user">{$user.email} <span class="caret"></span></a>

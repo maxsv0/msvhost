@@ -14,6 +14,8 @@ function Install_Msvhost($module) {
     msv_set_config("theme_bg", CONTENT_URL."/images/bg-5.jpg", true, "*");
 
     msv_set_config("jenkins_auth", "", true, "*");
+    msv_set_config("sitograph_image_production", "", true, "*");
+    msv_set_config("sitograph_image_development", "", true, "*");
 
     $itemTemplate = array(
         "name" => "website_create_notify_user",
