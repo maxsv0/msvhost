@@ -11,7 +11,13 @@
 	</tr>
 {foreach from=$user_instance key=instance_id item=instance} 
 <tr>
-	<td><a href="{$instance.url}" target="_blank">{$instance.url}</a></td>
+	<td>
+{if $instance.status_pers > 0 && $instance.status_pers != 100}
+		<a href="{$instance.url}" target="_blank">{$instance.url}</a>
+{else}
+		{$instance.url}
+{/if}
+	</td>
 	<td>{$instance.date_create}</td>
 	<td>{$instance.zone}</td>
 	<td>{$instance.size}</td>

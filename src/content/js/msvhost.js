@@ -55,16 +55,23 @@ function wizard_update_texts() {
 
     var price = 0;
     if ($('input[name=website_type]:checked').val() == "wtype1") {
-        price = 19;
+        price = 0;
     } else if ($('input[name=website_type]:checked').val() == "wtype2") {
-        price = 44;
+        price = 4.23;
     } else if ($('input[name=website_type]:checked').val() == "wtype3") {
-        price = 44;
+        price = 4.23;
     }
     $("#confirm_wtype_price1").html(price+"$");
     $("#confirm_wtype_price2").html(price+"$");
 
-    var price_total = price+5.75;
+    price_env = 0;
+    if ($('input[name=architecture]:checked').val() == "warch1") {
+        price_env = 0;
+    } else if ($('input[name=architecture]:checked').val() == "warch2") {
+        price_env = 4.23;
+    }
+
+    var price_total = price+price_env+4.75;
     $("#wprice_total").html(price_total + "$");
 
     $("#text_website_disk").html($("#inputdisk").val()+" Gb");

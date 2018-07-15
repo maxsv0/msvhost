@@ -25,9 +25,9 @@
             <tr>
                 <td class="table-title">Sitograph CMS</td>
                 <td class="text-center" onclick="table_type(1);"><span class="setup_reqired">setup required</span></td>
-                <td class="text-center" onclick="table_type(2);"><b>Yes</b></td>
-                <td class="text-center" onclick="table_type(3);"><b>Yes</b></td>
-                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+                <td class="text-center" onclick="table_type(2);"><span class="glyphicon glyphicon-ok"></span></td>
+                <td class="text-center" onclick="table_type(3);"><span class="glyphicon glyphicon-ok"></span></td>
+                <td class="text-center text-muted" onclick="table_type(4);"><span class="glyphicon glyphicon-ok"></span></td>
             </tr>
             <tr>
                 <td class="table-title">Design Theme</td>
@@ -39,51 +39,51 @@
             <tr>
                 <td class="table-title">Website Modules<br><small>Blog, Feedback, Gallery, Site search</small></td>
                 <td class="text-center" onclick="table_type(1);"><span class=setup_reqired">setup required</span></td>
-                <td class="text-center" onclick="table_type(2);"><b>Yes</b></td>
-                <td class="text-center" onclick="table_type(3);"><b>Yes</b></td>
-                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+                <td class="text-center" onclick="table_type(2);"><span class="glyphicon glyphicon-ok"></span></td>
+                <td class="text-center" onclick="table_type(3);"><span class="glyphicon glyphicon-ok"></span></td>
+                <td class="text-center text-muted" onclick="table_type(4);"><span class="glyphicon glyphicon-ok"></span></td>
             </tr>
             <tr>
                 <td class="table-title">Google API</td>
-                <td class="text-center" onclick="table_type(1);">No</td>
-                <td class="text-center" onclick="table_type(2);"><b>Yes</b></td>
-                <td class="text-center" onclick="table_type(3);"><b>Yes</b></td>
-                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+                <td class="text-center" onclick="table_type(1);"><span class="glyphicon glyphicon-remove"></span></td>
+                <td class="text-center" onclick="table_type(2);"><span class="glyphicon glyphicon-ok"></span></td>
+                <td class="text-center" onclick="table_type(3);"><span class="glyphicon glyphicon-ok"></span></td>
+                <td class="text-center text-muted" onclick="table_type(4);"><span class="glyphicon glyphicon-ok"></span></td>
             </tr>
             <tr>
                 <td class="table-title">Email service</td>
-                <td class="text-center" onclick="table_type(1);">No</td>
-                <td class="text-center" onclick="table_type(2);"><b>Yes</b></td>
-                <td class="text-center" onclick="table_type(3);"><b>Yes</b></td>
-                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+                <td class="text-center" onclick="table_type(1);"><span class="glyphicon glyphicon-remove"></span></td>
+                <td class="text-center" onclick="table_type(2);"><span class="glyphicon glyphicon-ok"></span></td>
+                <td class="text-center" onclick="table_type(3);"><span class="glyphicon glyphicon-ok"></span></td>
+                <td class="text-center text-muted" onclick="table_type(4);"><span class="glyphicon glyphicon-ok"></span></td>
             </tr>
             <tr>
                 <td class="table-title">Cart and payments</td>
-                <td class="text-center" onclick="table_type(1);">No</td>
-                <td class="text-center" onclick="table_type(2);">No</td>
-                <td class="text-center" onclick="table_type(3);">No</td>
-                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+                <td class="text-center" onclick="table_type(1);"><span class="glyphicon glyphicon-remove"></span></td>
+                <td class="text-center" onclick="table_type(2);"><span class="glyphicon glyphicon-remove"></span></td>
+                <td class="text-center" onclick="table_type(3);"><span class="glyphicon glyphicon-remove"></span></td>
+                <td class="text-center text-muted" onclick="table_type(4);"><span class="glyphicon glyphicon-ok"></span></td>
             </tr>
             <tr>
                 <td class="table-title">Email marketing</td>
-                <td class="text-center" onclick="table_type(1);">No</td>
-                <td class="text-center" onclick="table_type(2);">No</td>
-                <td class="text-center" onclick="table_type(3);">No</td>
-                <td class="text-center text-muted" onclick="table_type(4);"><b>Yes</b></td>
+                <td class="text-center" onclick="table_type(1);"><span class="glyphicon glyphicon-remove"></span></td>
+                <td class="text-center" onclick="table_type(2);"><span class="glyphicon glyphicon-remove"></span></td>
+                <td class="text-center" onclick="table_type(3);"><span class="glyphicon glyphicon-remove"></span></td>
+                <td class="text-center text-muted" onclick="table_type(4);"><span class="glyphicon glyphicon-ok"></span></td>
             </tr>
             <tr class="text-center">
                 <td class="table-title">Price</td>
                 <td onclick="table_type(1);">
-                    <p style="font-size:16px;">19$ per month</p>
+                    <p style="font-size:16px;">FREE</p>
                 </td>
                 <td onclick="table_type(2);">
-                    <p style="font-size:16px;">44$ per month</p>
+                    <p style="font-size:16px;">4.23$ per month</p>
                 </td>
                 <td onclick="table_type(3);">
-                    <p style="font-size:16px;">44$ per month</p>
+                    <p style="font-size:16px;">4.23$ per month</p>
                 </td>
                 <td onclick="table_type(4);">
-                    <p class="text-muted" style="font-size:16px;">99$ per month</p>
+                    <p class="text-muted" style="font-size:16px;">49$ per month</p>
                 </td>
             </tr>
             <tr class="text-center">

@@ -19,7 +19,6 @@
     z-index: -1;
 }
 
-
 .setup_reqired {
     font-style: italic;
 }
@@ -74,6 +73,15 @@
 .thumbnail-hover:hover .thumbnail-overlay {
     bottom: 0;
     height: 100%;
+}
+
+
+.admin_panel {
+    top: auto;
+}
+
+.table-highlight .glyphicon-remove {
+    color:#777;
 }
 
 
