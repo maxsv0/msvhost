@@ -114,3 +114,20 @@ if (!empty($_REQUEST["finish"])) {
         msv_assign_data("language", $_REQUEST["language"]);
     }
 }
+
+msv_include_js("
+    // Code for the Validator
+    var $validator = $('.wizard-card form').validate({
+        rules: {
+            websiteurl: {
+                required: true,
+                alphanumeric: true,
+                minlength: 3
+            },
+            email: {
+                required: true,
+                email: true,
+            }
+        },
+    });
+    ", "/create/");

@@ -6,33 +6,33 @@
     <div class="col-sm-7 col-sm-offset-2 well">
 
         <div class="row">
-            <p class="col-sm-5">Endpoint URL</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">Endpoint URL</p>
+            <p class="col-xs-7">
                 <b id="input_production_endpoint"></b>
             </p>
 
-            <p class="col-sm-5">Website type</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">Website type</p>
+            <p class="col-xs-7">
                 <b id="text_website_type">Theme Default</b>
             </p>
 
-            <p class="col-sm-5">Instance type</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">License type</p>
+            <p class="col-xs-7">
                 <b id="text_website_architecture">Production</b>
             </p>
 
-            <p class="col-sm-5">Instance size</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">Instance size</p>
+            <p class="col-xs-7">
                 <span id="text_website_size">f1-micro</span>
             </p>
 
-            <p class="col-sm-5">Disk</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">Disk</p>
+            <p class="col-xs-7">
                 <span id="text_website_disk">10</span>
             </p>
 
-            <p class="col-sm-5">Location</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">Location</p>
+            <p class="col-xs-7">
                 <span id="text_website_location">us-central1</span>
             </p>
         </div>

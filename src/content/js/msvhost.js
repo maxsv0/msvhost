@@ -70,6 +70,8 @@ function wizard_update_texts() {
     } else if ($('input[name=architecture]:checked').val() == "warch2") {
         price_env = 4.23;
     }
+    $("#confirm_warch_price1").html(price_env+"$");
+    $("#confirm_warch_price2").html(price_env+"$");
 
     var price_total = price+price_env+4.75;
     $("#wprice_total").html(price_total + "$");
@@ -77,7 +79,7 @@ function wizard_update_texts() {
     $("#text_website_disk").html($("#inputdisk").val()+" Gb");
 
     $("#confirm_website_type").html("Website '"+$("#text_website_type").html() + "'");
-    $("#confirm_website_architecture").html("Instance type '"+$("#text_website_architecture").html()+"'");
+    $("#confirm_website_architecture").html($("#text_website_architecture").html()+" license");
     $("#confirm_website_size").html("Instance hosting '" + $("#text_website_size").html()+"'");
     $("#confirm_website_disk").html("Instance disk " + $("#text_website_disk").html());
 }

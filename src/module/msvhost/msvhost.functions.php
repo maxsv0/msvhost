@@ -50,16 +50,19 @@ function MsvhostLoadUser($module) {
 		foreach ($resultQuery["data"] as $row) {
 
 		    $tm = time() - strtotime($row["date_create"]);
+		    $trial_days = 5 - floor($tm/86400);
+
 			if ($row["status"] == "working") {
-				$status_pers = 38 + ceil(5*(min($tm, 15)/15));
+				$status_pers = 38 + floor(5*(min($tm, 15)/15));
 			} elseif ($row["status"] == "create-success") {
-				$status_pers = 43 + ceil(57*(min($tm, 200)/200));
+				$status_pers = 43 + floor(57*(min($tm, 200)/200));
 			} elseif ($row["status"] == "install-success") {
 				$status_pers = 100;
 			} elseif ($row["status"] == "create-fail" || $row["status"] == "install-fail") {
 				$status_pers = 0;
 			}
 			$row["status_pers"] = $status_pers;
+			$row["trial_days"] = $trial_days;
 			$list[] = $row;
 		}
 

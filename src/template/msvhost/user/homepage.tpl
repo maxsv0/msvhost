@@ -3,25 +3,40 @@
 <table class="table">
 	<tr>
 		<th>URL</th>
-		<th>Created</th>
 		<th>Zone</th>
 		<th>Size</th>
 		<th>Disk</th>
+		<th>Status</th>
 		<th>Actions</th>
 	</tr>
 {foreach from=$user_instance key=instance_id item=instance} 
 <tr>
 	<td>
-{if $instance.status_pers > 0 && $instance.status_pers != 100}
+{if $instance.status_pers == 100}
 		<a href="{$instance.url}" target="_blank">{$instance.url}</a>
 {else}
 		{$instance.url}
 {/if}
 	</td>
-	<td>{$instance.date_create}</td>
 	<td>{$instance.zone}</td>
 	<td>{$instance.size}</td>
 	<td>{$instance.disk} Gb</td>
+	<td>
+{if $instance.status_pers == 100}
+	<span class="label label-success">active</span>
+
+{if $trial_days > 1}
+	trial remain: {$trial_days} day
+{else}
+	trial remain: {$trial_days} days
+{/if}
+
+{elseif $instance.status == "create-fail" || $instance.status == "install-fail"}
+	<span class="label label-danger">failed</span>
+{else}
+	<span class="label label-info">installing</span>
+{/if}
+	</td>
 	<td>
         {if $instance.status_pers == 100}
 			<a href="?instance_reset={$instance.id}" class="btn btn-warning">Reset</a>
@@ -35,7 +50,7 @@
 {if $instance.status_pers > 0 && $instance.status_pers != 100}
 <tr>
 	<td style="border-top:0;">
-		<p>Install status</p>
+		<p>Installing..</p>
 		<span class="text-muted">updated: {$instance.status_date}</span>
 	</td>
 	<td colspan="7" style="border-top:0;">

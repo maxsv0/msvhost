@@ -14,22 +14,16 @@
                 <th>Amount</th>
             </tr>
             <tr>
-                <td>Sitograph CMS</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr>
                 <td id="confirm_website_type">Website - Theme Default</td>
                 <td>1</td>
                 <td id="confirm_wtype_price1">44$</td>
                 <td id="confirm_wtype_price2">44$</td>
             </tr>
             <tr>
-                <td id="confirm_website_architecture">Production Instance</td>
+                <td id="confirm_website_architecture">Normal license</td>
                 <td>1</td>
-                <td>1$</td>
-                <td>1$</td>
+                <td id="confirm_warch_price1">0</td>
+                <td id="confirm_warch_price2">0</td>
             </tr>
             <tr>
                 <td id="confirm_website_size">Instance f1-micro</td>
