@@ -117,7 +117,7 @@ if (!empty($_REQUEST["finish"])) {
 
 msv_include_js("
     // Code for the Validator
-    var $validator = $('.wizard-card form').validate({
+    var \$validator = $('.wizard-card form').validate({
         rules: {
             websiteurl: {
                 required: true,

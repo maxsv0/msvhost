@@ -25,11 +25,13 @@
 {if $instance.status_pers == 100}
 	<span class="label label-success">active</span>
 
+	<p>trial remain:
 {if $trial_days > 1}
-	trial remain: {$trial_days} day
+	{$trial_days} day
 {else}
-	trial remain: {$trial_days} days
+	{$trial_days} days
 {/if}
+	</p>
 
 {elseif $instance.status == "create-fail" || $instance.status == "install-fail"}
 	<span class="label label-danger">failed</span>
@@ -51,7 +53,6 @@
 <tr>
 	<td style="border-top:0;">
 		<p>Installing..</p>
-		<span class="text-muted">updated: {$instance.status_date}</span>
 	</td>
 	<td colspan="7" style="border-top:0;">
 
