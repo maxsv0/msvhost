@@ -24,15 +24,6 @@
 	<td>
 {if $instance.status_pers == 100}
 	<span class="label label-success">active</span>
-
-	<p>trial remain:
-{if $trial_days > 1}
-	{$trial_days} day
-{else}
-	{$trial_days} days
-{/if}
-	</p>
-
 {elseif $instance.status == "create-fail" || $instance.status == "install-fail"}
 	<span class="label label-danger">failed</span>
 {else}
@@ -66,3 +57,8 @@
 {/if}
 {/foreach}
 </table>
+
+
+<div class="col-sm-6 col-sm-offset-3 content-offset">
+	<a href="/create/" type="button" class="btn btn-primary btn-lg btn-block">Create website now</a>
+</div>

@@ -48,11 +48,10 @@
 
     <div class="col-sm-6 col-sm-offset-3">
         <div class="row form-group">
-            <div class="col-xs-2 text-right">
-                <input type="checkbox" id="terms" name="terms" value="1" checked>
-            </div>
-            <label class="col-xs-10" for="terms">
-                <a href="/terms-and-conditions/" target="_blank">I agree to terms and conditions of a service</a>
+            <label class="col-sm-10 col-sm-offset-2" for="terms">
+                <a href="/terms-and-conditions/" target="_blank">I agree to <a href="/terms-and-conditions/">terms and conditions</a> of a service</a>
+                &nbsp;&nbsp;
+                <input type="checkbox" id="terms" name="terms" value="1">
             </label>
         </div>
     </div>
