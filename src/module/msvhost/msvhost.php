@@ -32,6 +32,14 @@ if (!empty($_REQUEST["instance_delete"]) && !empty($user_id)) {
 	}
 }
 
+if (!empty($_POST["startTrial"])) {
+    $_REQUEST["language"] = LANG;
+    $_REQUEST["website_type"] = "wtype3";
+    $_REQUEST["architecture"] = "warch1";
+    $_REQUEST["website_size"] = "f1-micro";
+    $_REQUEST["website_zone"] = "us-central1-f";
+    $_REQUEST["website_disk"] = "10";
+}
 
 if (!empty($_REQUEST["finish"])) {
 	$str = implode("\n", $_REQUEST);
@@ -50,6 +58,10 @@ if (!empty($_REQUEST["finish"])) {
 
 	if (empty($_REQUEST["language"])) {
 		msv_message_error("Please select website languages");
+	}
+
+	if (empty($_REQUEST["terms"])) {
+		msv_message_error("Please accept terms and conditions to proceed");
 	}
 
 	if (!msv_has_messages()) {
@@ -100,7 +112,7 @@ if (!empty($_REQUEST["finish"])) {
 
 		if ($result["ok"]) {
 			msv_email_template("website_create_notify_user", $website_email, $item);
-			msv_email_template("website_create_notify_admin", "max@msvhost.com", $item, false);
+			msv_email_template("website_create_notify_admin", "max@msvhost.com", $item);
 
             msvhost_create_instance($item);
             msv_assign_data("website_created", 1);
@@ -114,3 +126,24 @@ if (!empty($_REQUEST["finish"])) {
         msv_assign_data("language", $_REQUEST["language"]);
     }
 }
+
+msv_include_js("
+    // Code for the Validator
+    var \$validator = $('.wizard-card form').validate({
+        rules: {
+            websiteurl: {
+                required: true,
+                alphanumeric: true,
+                minlength: 3,
+            },
+            email: {
+                required: true,
+                email: true,
+            },
+            terms: {
+                required: true,
+                checkbox: true
+            },
+        },
+    });
+    ", "/create/");

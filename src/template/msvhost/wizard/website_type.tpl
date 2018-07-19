@@ -77,10 +77,12 @@
                     <p style="font-size:16px;">FREE</p>
                 </td>
                 <td onclick="table_type(2);">
-                    <p style="font-size:16px;">4.23$ per month</p>
+                    <p style="font-size:16px;text-decoration: line-through;">4.23$ per month</p>
+                    <p style="font-size:16px;color:red;">FREE *</p>
                 </td>
                 <td onclick="table_type(3);">
-                    <p style="font-size:16px;">4.23$ per month</p>
+                    <p style="font-size:16px;text-decoration: line-through;">4.23$ per month</p>
+                    <p style="font-size:16px;color:red;">FREE *</p>
                 </td>
                 <td onclick="table_type(4);">
                     <p class="text-muted" style="font-size:16px;">49$ per month</p>
@@ -94,5 +96,7 @@
                 <td onclick="table_type(4);"><input type="radio" name="website_type" value="wtype4" id="wtype4" disabled="disabled"></td>
             </tr>
         </table>
+
+        <p><span style="color:red;">*</span> FREE in Open Beta</p>
     </div>
 </div>

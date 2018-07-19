@@ -6,33 +6,33 @@
     <div class="col-sm-7 col-sm-offset-2 well">
 
         <div class="row">
-            <p class="col-sm-5">Endpoint URL</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">Endpoint URL</p>
+            <p class="col-xs-7">
                 <b id="input_production_endpoint"></b>
             </p>
 
-            <p class="col-sm-5">Website type</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">Website type</p>
+            <p class="col-xs-7">
                 <b id="text_website_type">Theme Default</b>
             </p>
 
-            <p class="col-sm-5">Instance type</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">License type</p>
+            <p class="col-xs-7">
                 <b id="text_website_architecture">Production</b>
             </p>
 
-            <p class="col-sm-5">Instance size</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">Instance size</p>
+            <p class="col-xs-7">
                 <span id="text_website_size">f1-micro</span>
             </p>
 
-            <p class="col-sm-5">Disk</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">Disk</p>
+            <p class="col-xs-7">
                 <span id="text_website_disk">10</span>
             </p>
 
-            <p class="col-sm-5">Location</p>
-            <p class="col-sm-7">
+            <p class="col-xs-5">Location</p>
+            <p class="col-xs-7">
                 <span id="text_website_location">us-central1</span>
             </p>
         </div>
@@ -70,22 +70,34 @@
                 <option value="us-central1-b" selected>us-central1-b (Council Buffs, IA)</option>
                 <option value="us-central1-c" selected>us-central1-c (Council Buffs, IA)</option>
                 <option value="us-central1-f" selected>us-central1-f (Council Buffs, IA)</option>
-                {*<option value="us-east1">us-east1 (Moncks Corner, SC)</option>*}
+                <option value="us-east1-b">us-east1-b (Moncks Corner, SC)</option>
+                <option value="us-east1-c">us-east1-c (Moncks Corner, SC)</option>
+                <option value="us-east1-d">us-east1-d (Moncks Corner, SC)</option>
                 {*<option value="us-east4">us-east4 (Ashburn, VA)</option>*}
                 {*<option value="us-west1">us-west1 (The Dalles, OR)</option>*}
-                {*<option value="europe-north1">europe-north1 (Hamina, Finland)</option>*}
+                <option value="europe-north1-a">europe-north1-a (Hamina, Finland)</option>
+                <option value="europe-north1-b">europe-north1-b (Hamina, Finland)</option>
+                <option value="europe-north1-c">europe-north1-c (Hamina, Finland)</option>
                 <option value="europe-west1-b">europe-west1-b (St. Ghislain, Belgium)</option>
                 <option value="europe-west1-c">europe-west1-c (St. Ghislain, Belgium)</option>
                 <option value="europe-west1-d">europe-west1-d (St. Ghislain, Belgium)</option>
-                {*<option value="europe-west2">europe-west2 (London, UK)</option>*}
+                <option value="europe-west2-a">europe-west2-a (London, UK)</option>
+                <option value="europe-west2-b">europe-west2-b (London, UK)</option>
+                <option value="europe-west2-c">europe-west2-c (London, UK)</option>
                 {*<option value="europe-west3">europe-west3 (Frankfurt, Germany)</option>*}
                 {*<option value="europe-west4">europe-west4 (Eemshaven, Netherlands)</option>*}
                 {*<option value="northamerica-northeast1">northamerica-northeast1 (Montréal, Quebec, Canada)</option>*}
-                {*<option value="southamerica-east1">southamerica-east1 (São Paulo, Brazil)</option>*}
-                {*<option value="australia-southeast1">australia-southeast1 (Sydney, Australia)</option>*}
+                <option value="southamerica-east1-a">southamerica-east1-a (São Paulo, Brazil)</option>
+                <option value="southamerica-east1-b">southamerica-east1-b (São Paulo, Brazil)</option>
+                <option value="southamerica-east1-c">southamerica-east1-c (São Paulo, Brazil)</option>
+                <option value="australia-southeast1-a">australia-southeast1-a (Sydney, Australia)</option>
+                <option value="australia-southeast1-b">australia-southeast1-b (Sydney, Australia)</option>
+                <option value="australia-southeast1-c">australia-southeast1-c (Sydney, Australia)</option>
                 {*<option value="asia-south1">asia-south1 (Mumbai, India)</option>*}
                 {*<option value="asia-southeast1">asia-southeast1 (Jurong West, Singapore)</option>*}
-                {*<option value="asia-east1">asia-east1 (Changhua County, Taiwan)</option>*}
+                <option value="asia-east1-a">asia-east1-a (Changhua County, Taiwan)</option>
+                <option value="asia-east1-b">asia-east1-b (Changhua County, Taiwan)</option>
+                <option value="asia-east1-c">asia-east1-c (Changhua County, Taiwan)</option>
                 {*<option value="asia-northeast1">asia-northeast1 (Tokyo, Japan)</option>*}
             </select>
         </div>

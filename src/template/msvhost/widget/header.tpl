@@ -9,7 +9,7 @@
     <meta name="description" content="{$page.description}"/>
     {$htmlHead}
 </head>
-<body {if $theme_bg}style="background: url({$theme_bg}) #FFF;"{/if}>
+<body {if $theme_bg}style="background: url({$theme_bg}) #FFF;background-size:contain;"{/if}>
 
 {include file="$themePath/widget/menu-top.tpl"}
  

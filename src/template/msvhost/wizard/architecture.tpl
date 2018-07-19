@@ -66,11 +66,12 @@
             <tr>
                 <td class="table-title">Price</td>
                 <td class="text-center" onclick="table_architecture(1);">
-                    <p style="font-size:16px;">FREE</p>
+                    <p style="font-size:16px;text-decoration: line-through;">2.49$ per month</p>
+                    <p style="font-size:16px;color:red;">FREE *</p>
                 </td>
                 <td class="text-center" onclick="table_architecture(2);">
                     <p style="font-size:16px;text-decoration: line-through;">249$ per month</p>
-                    <p style="font-size:16px;color:red;">2.49$ per month *</p>
+                    <p style="font-size:16px;color:red;">FREE *</p>
                 </td>
             </tr>
             <tr class="text-center">
@@ -80,6 +81,6 @@
             </tr>
         </table>
 
-        <p><span style="color:red;">*</span> until 01.01.2019</p>
+        <p><span style="color:red;">*</span> in Open Beta</p>
     </div>
 </div>

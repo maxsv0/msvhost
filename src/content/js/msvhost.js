@@ -57,9 +57,9 @@ function wizard_update_texts() {
     if ($('input[name=website_type]:checked').val() == "wtype1") {
         price = 0;
     } else if ($('input[name=website_type]:checked').val() == "wtype2") {
-        price = 4.23;
+        price = 0;
     } else if ($('input[name=website_type]:checked').val() == "wtype3") {
-        price = 4.23;
+        price = 0;
     }
     $("#confirm_wtype_price1").html(price+"$");
     $("#confirm_wtype_price2").html(price+"$");
@@ -68,16 +68,18 @@ function wizard_update_texts() {
     if ($('input[name=architecture]:checked').val() == "warch1") {
         price_env = 0;
     } else if ($('input[name=architecture]:checked').val() == "warch2") {
-        price_env = 4.23;
+        price_env = 0;
     }
+    $("#confirm_warch_price1").html(price_env+"$");
+    $("#confirm_warch_price2").html(price_env+"$");
 
-    var price_total = price+price_env+4.75;
+    var price_total = price+price_env+0;
     $("#wprice_total").html(price_total + "$");
 
     $("#text_website_disk").html($("#inputdisk").val()+" Gb");
 
     $("#confirm_website_type").html("Website '"+$("#text_website_type").html() + "'");
-    $("#confirm_website_architecture").html("Instance type '"+$("#text_website_architecture").html()+"'");
+    $("#confirm_website_architecture").html($("#text_website_architecture").html()+" license");
     $("#confirm_website_size").html("Instance hosting '" + $("#text_website_size").html()+"'");
     $("#confirm_website_disk").html("Instance disk " + $("#text_website_disk").html());
 }

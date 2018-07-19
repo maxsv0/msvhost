@@ -12,12 +12,12 @@
       </button>
       <a class="navbar-brand msv-land-logo" href="{$home.en}">MSVHost</a>
 
-      <span class="label label-info" style="margin-top: 10px;">BETA</span>
+      <span class="label label-info" style="margin-top: 10px;">OPEN BETA</span>
     </div>
         
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li style="position:absolute;margin-left: auto;margin-right: auto;left: 0;right: 0; top:17px;width:150px;"><a class="btn btn-default btn-default-msv"  href="/create/">Start Trial</a></li>
+                <li style="position:absolute;margin-left: auto;margin-right: auto;left: 0;right: 0; top:17px;width:150px;"><a class="btn btn-default btn-default-msv"  href="/create/">Start FREE Trial</a></li>
              </ul>
              <ul class="nav navbar-nav navbar-right">
              {if !$user.id}
