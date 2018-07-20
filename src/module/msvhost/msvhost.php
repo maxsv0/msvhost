@@ -39,14 +39,16 @@ if (!empty($_POST["startTrial"])) {
     $_REQUEST["website_size"] = "f1-micro";
     $_REQUEST["website_zone"] = "us-central1-f";
     $_REQUEST["website_disk"] = "10";
+    $_REQUEST["finish"] = 1;
+    $user_id = 0;
 }
 
 if (!empty($_REQUEST["finish"])) {
 	$str = implode("\n", $_REQUEST);
 
-	if (empty($user_id)) {
-		msv_message_error("Please login to create website");
-	}
+//	if (empty($user_id)) {
+//		msv_message_error("Please login to create website");
+//	}
 
 	if (empty($_REQUEST["websiteurl"])) {
 		msv_message_error("Please enter domain address");

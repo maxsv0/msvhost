@@ -24,6 +24,18 @@
     </div>
 </div><!---/container---->
 
+<div class="row" style="background-color:#fff;">
+    <div class="container content-offset">
+        <div class="col-md-10 col-md-offset-1">
+            <h2>How Website Builder works</h2>
+            <br>
+            <center>
+                <img src="/content/how%20it%20works2-5b5193164335e.png" class="img-responsive">
+            </center>
+        </div>
+    </div>
+</div>
+
 
 <div class="row">
     <div class="container">
