@@ -26,8 +26,8 @@
 		<field name="date_create" type="date"/>
 		<field name="admin_email" type="str" listskip="1"/>
 		<field name="name" type="str" listskip="1"/>
-		<field name="domain" type="str"/>
-		<field name="url" type="str" listskip="1"/>
+		<field name="domain" type="str" listskip="1"/>
+		<field name="url" type="url"	/>
 		<field name="type" type="str" listskip="1"/>
 		<field name="arch" type="str" listskip="1"/>
 		<field name="size" type="str" listskip="1"/>

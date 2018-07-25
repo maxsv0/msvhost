@@ -1,5 +1,10 @@
 <a class="thumbnail thumbnail-hover" href="{$instance.url}" title="{$instance.domain}" target="_blank">
+    <span class="thumbnail-overlay-top">
+
+    </span>
+
     <img src="{$instance.preview}" alt="{$instance.domain}">
+
     <span class="thumbnail-overlay">
 <span class="thumbnail-text">
 <h2>{$instance.domain}</h2>

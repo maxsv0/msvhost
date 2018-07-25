@@ -24,21 +24,23 @@
     </div>
 </div><!---/container---->
 
-<div class="row" style="background-color:#fff;">
-    <div class="container content-offset">
+<div style="background-color:#fff;">
+<div class="container">
+    <div class="row content-offset">
         <div class="col-md-10 col-md-offset-1">
-            <h2>How Website Builder works</h2>
+            <h2>How it works</h2>
             <br>
             <center>
-                <img src="/content/how%20it%20works2-5b5193164335e.png" class="img-responsive">
+                <img src="/content/how%20it%20works-v2%20(1)-5b558a25ead36.png" class="img-responsive">
             </center>
         </div>
     </div>
 </div>
+</div>
 
 
-<div class="row">
-    <div class="container">
+<div class="container">
+    <div class="row">
         <div class="col-sm-7 col-sm-offset-5 content-block content-offset">
             <form class="form-horizontal" method="POST" action="/create/" >
                 <div class="col-sm-10 col-sm-offset-1">
@@ -76,8 +78,9 @@
 </div>
 
 
-<div class="row" style="background:url(/content/promo1-5b4e3e43143f3.jpg) no-repeat;background-color:#fff;background-size:cover;">
-    <div class="container">
+<div style="background:url(/content/promo1-5b4e3e43143f3.jpg) no-repeat;background-color:#fff;background-size:cover;">
+<div class="container">
+    <div class="row">
         <div class="col-md-5 col-sm-6 col-md-offset-7 col-sm-offset-6" style="background-color: rgba(255,255,255,0.8); height: 600px;">
             <p>&nbsp;</p>
             <p>&nbsp;</p>
@@ -89,10 +92,12 @@
         </div>
     </div>
 </div>
+</div>
 
 
-<div class="row" style="background-color:#fff;">
-    <div class="container">
+<div style="background-color:#fff;">
+<div class="container">
+    <div class="row">
         <div class="col-md-5">
             <h2 style="margin-left:70px;margin-top:50px;">Sitograph CMS features</h2>
             <ul class="lead" style="margin-left:70px; line-height: 2;">
@@ -113,10 +118,12 @@
         </div>
     </div>
 </div>
+</div>
 
 
-<div class="row" style="background-color: rgba(255,255,255,0.9);">
-    <div class="container content-offset">
+<div style="background-color: rgba(255,255,255,0.9);">
+<div class="container">
+    <div class="row content-offset">
         <div class="col-sm-4 col-sm-offset-3">
             <a href="/create/" type="button" class="btn btn-default btn-lg btn-block">
                 <span class="glyphicon glyphicon-circle-arrow-right"></span> Visit Demo Sitograph CMS
@@ -128,10 +135,12 @@
         </div>
     </div>
 </div>
+</div>
 
 
-<div class="row" style="background-color:#fff;">
-    <div class="container">
+<div style="background-color:#fff;">
+<div class="container">
+    <div class="row">
         <div class="col-md-5">
             <h2 style="margin-left:70px;margin-top:50px;">Customize your website</h2>
             <ul class="lead" style="margin-left:70px; line-height: 2;">
@@ -155,14 +164,17 @@
         </div>
     </div>
 </div>
+</div>
 
 
-<div class="row" style="background-color: rgba(255,255,255,0.9);">
-    <div class="container">
+<div style="background-color: rgba(255,255,255,0.9);">
+<div class="container">
+    <div class="row">
         <div class="col-sm-6 col-sm-offset-3 content-offset">
             <a href="/create/" type="button" class="btn btn-primary btn-lg btn-block">Start FREE Trial now</a>
         </div>
     </div>
+</div>
 </div>
 
 {include file="$themePath/widget/footer.tpl"}

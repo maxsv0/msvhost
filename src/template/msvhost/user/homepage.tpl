@@ -3,10 +3,9 @@
 <table class="table">
 	<tr>
 		<th>URL</th>
-		<th>Zone</th>
-		<th>Size</th>
-		<th>Disk</th>
+		<th>Instance</th>
 		<th>Status</th>
+		<th>Public</th>
 		<th>Actions</th>
 	</tr>
 {foreach from=$user_instance key=instance_id item=instance} 
@@ -18,17 +17,28 @@
 		{$instance.url}
 {/if}
 	</td>
-	<td>{$instance.zone}</td>
-	<td>{$instance.size}</td>
-	<td>{$instance.disk} Gb</td>
 	<td>
-{if $instance.status_pers == 100}
+		<p>{$instance.zone}</p>
+		<p class="text-muted">{$instance.size}, {$instance.disk} Gb</p>
+	</td>
+	<td>
+{if $instance.status == "active-trial"}
+	<span class="label label-success">trial active</span>
+	<p>trial days remain: {$instance.trial_days}</p>
+{elseif $instance.status == "active"}
 	<span class="label label-success">active</span>
-{elseif $instance.status == "create-fail" || $instance.status == "install-fail"}
-	<span class="label label-danger">failed</span>
+{elseif $instance.status == "create-fail" || $instance.status == "install-fail" || $instance.status == "disabled"}
+	<span class="label label-danger">{$instance.status}</span>
 {else}
 	<span class="label label-info">installing</span>
 {/if}
+	</td>
+	<td>
+        {if $instance.public}
+			<span class="text-success bool-switch" data-id="{$instance.id}" data-section="msvhost" data-table="instance" data-field="public" data-value="1">{$t["yes"]}</span>
+		{else}
+			<span class="text-danger bool-switch" data-id="{$instance.id}" data-section="msvhost" data-table="instance" data-field="public" data-value="0">{$t["no"]}</span>
+		{/if}
 	</td>
 	<td>
         {if $instance.status_pers == 100}

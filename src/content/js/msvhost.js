@@ -4,7 +4,26 @@ $(document).ready(function() {
 
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
-    })
+    });
+
+
+    $('.bool-switch').html(function() {
+        var str = '';
+        if ($(this).data("value") > 0) {
+            str = '<label class="switch"><input type="checkbox" checked onclick="';
+            value_set = 0;
+            // $(this).parent().parent().addClass("text-muted");
+        } else {
+            str = '<label class="switch"><input type="checkbox" onclick="';
+            value_set = 1;
+            // $(this).parent().parent().removeClass("text-muted");
+        }
+        str += 'user_toggle_submit(this,\''+$(this).data("section")+'\',\''+$(this).data("table")+'\',\''+$(this).data("id")+'\',\''+$(this).data("field")+'\',\''+value_set+'\');';
+        str += '"><span class="slider round"></span></label>';
+        return str;
+    });
+
+
 });
 
 function table_highlight(id, index) {
@@ -82,4 +101,46 @@ function wizard_update_texts() {
     $("#confirm_website_architecture").html($("#text_website_architecture").html()+" license");
     $("#confirm_website_size").html("Instance hosting '" + $("#text_website_size").html()+"'");
     $("#confirm_website_disk").html("Instance disk " + $("#text_website_disk").html());
+}
+
+
+function user_toggle_submit(e,section, table, id, field, value) {
+    console.log(e,section, table, id, field, value);
+    if ($(e).parent().parent().parent().parent().hasClass("text-muted") && field == "published") {
+        $(e).parent().parent().parent().parent().removeClass("text-muted");
+    } else if(field == "published"){
+        $(e).parent().parent().parent().parent().addClass("text-muted");
+    }
+
+    $form = $('<form>' +
+        '<input type="hidden" value="'+section+'" name="section">'+
+        '<input type="hidden" value="'+table+'" name="table">'+
+        '<input type="hidden" value="'+id+'" name="itemID">'+
+        '<input type="hidden" value="'+id+'" name="form_id">'+
+        '<input type="hidden" value="'+value+'" name="form_'+field+'">'+
+        '<input type="hidden" value="1" name="ajaxcall">'+
+        '<input type="hidden" value="1" name="save">'+
+        '</form>');
+
+    $.ajax({
+        type: "post",
+        url: "/user/",
+        data: $form.serialize(),
+        success: function (data) {
+            var obj = JSON.parse(data);
+
+            var msg = $("#submit_status");
+            msg.removeClass("alert-danger alert-success hide");
+            msg.html(obj.msg);
+
+            if(obj.ok) {
+                msg.removeClass("alert-warning").addClass("alert-success", 500);
+            } else {
+                msg.removeClass("alert-warning").addClass("alert-danger", 500);
+            }
+        },
+        error: function (data) {
+            console.log(data);
+        },
+    });
 }

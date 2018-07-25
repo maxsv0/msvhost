@@ -61,8 +61,22 @@ function MsvhostLoadUser($module) {
 			} elseif ($row["status"] == "create-fail" || $row["status"] == "install-fail") {
 				$status_pers = 0;
 			}
+
+			if ($trial_days < 0) {
+			    // TODO: trial over
+                $row["trial_days"] = 0;
+                $row["status"] = "disabled";
+                $trial_days = 0;
+
+                if ($row["user_id"] <= 5) {
+                    $row["status"] = "active";
+                }
+            } else {
+                $row["status"] = "active-trial";
+                $row["trial_days"] = $trial_days;
+            }
+
 			$row["status_pers"] = $status_pers;
-			$row["trial_days"] = $trial_days;
 			$list[] = $row;
 		}
 

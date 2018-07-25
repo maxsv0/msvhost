@@ -40,7 +40,6 @@ if (!empty($_POST["startTrial"])) {
     $_REQUEST["website_zone"] = "us-central1-f";
     $_REQUEST["website_disk"] = "10";
     $_REQUEST["finish"] = 1;
-    $user_id = 0;
 }
 
 if (!empty($_REQUEST["finish"])) {
