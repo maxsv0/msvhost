@@ -2,28 +2,36 @@
 
 <table class="table">
 	<tr>
-		<th>URL</th>
-		<th>Instance</th>
-		<th>Status</th>
-		<th>Public</th>
-		<th>Actions</th>
+		<th class="col-sm-3">Instance</th>
+		<th class="col-sm-5">Preview</th>
+		<th class="col-sm-3">Status</th>
+		<th class="col-sm-1">Actions</th>
 	</tr>
 {foreach from=$user_instance key=instance_id item=instance} 
 <tr>
 	<td>
+		<p>
 {if $instance.status_pers == 100}
 		<a href="{$instance.url}" target="_blank">{$instance.url}</a>
 {else}
 		{$instance.url}
 {/if}
-	</td>
-	<td>
+		</p>
 		<p>{$instance.zone}</p>
 		<p class="text-muted">{$instance.size}, {$instance.disk} Gb</p>
 	</td>
+
+	<td>
+{if $instance.preview}
+	<p style="height:350px;overflow: hidden;">
+		<img src="{$instance.preview}" class="img-thumbnail">
+	</p>
+{/if}
+	</td>
+
 	<td>
 {if $instance.status == "active-trial"}
-	<span class="label label-success">trial active</span>
+	<span class="label label-warning">trial active</span>
 	<p>trial days remain: {$instance.trial_days}</p>
 {elseif $instance.status == "active"}
 	<span class="label label-success">active</span>
@@ -32,13 +40,15 @@
 {else}
 	<span class="label label-info">installing</span>
 {/if}
-	</td>
-	<td>
+
+		<p>
+			Public:
         {if $instance.public}
 			<span class="text-success bool-switch" data-id="{$instance.id}" data-section="msvhost" data-table="instance" data-field="public" data-value="1">{$t["yes"]}</span>
-		{else}
+        {else}
 			<span class="text-danger bool-switch" data-id="{$instance.id}" data-section="msvhost" data-table="instance" data-field="public" data-value="0">{$t["no"]}</span>
-		{/if}
+        {/if}
+		</p>
 	</td>
 	<td>
         {if $instance.status_pers == 100}

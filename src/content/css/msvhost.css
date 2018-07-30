@@ -75,6 +75,15 @@
     height: 100%;
 }
 
+.thumbnail-overlay-top {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: white;
+    position: relative;
+    z-index: 999;
+}
 
 .admin_panel {
     top: auto;

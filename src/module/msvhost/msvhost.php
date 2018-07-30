@@ -101,7 +101,7 @@ if (!empty($_REQUEST["finish"])) {
 			"size" => $website_size,
 			"zone" => $website_zone,
 			"disk" => $website_disk,
-			"lang" => $website_lang,
+			"language" => $website_lang,
 			"ga_track" => $ga_track,
 			"ga_property" => $ga_property,
 			"status" => "working",

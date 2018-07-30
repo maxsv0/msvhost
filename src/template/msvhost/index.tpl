@@ -31,7 +31,7 @@
             <h2>How it works</h2>
             <br>
             <center>
-                <img src="/content/how%20it%20works-v2%20(1)-5b558a25ead36.png" class="img-responsive">
+                <img src="/content/how%20it%20works-v3-5b59a13c812a7.png" class="img-responsive">
             </center>
         </div>
     </div>
