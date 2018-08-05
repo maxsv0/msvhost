@@ -2,13 +2,21 @@
 
 <table class="table">
 	<tr>
-		<th class="col-sm-3">Instance</th>
 		<th class="col-sm-5">Preview</th>
-		<th class="col-sm-3">Status</th>
+		<th class="col-sm-3">Instance</th>
+		<th class="col-sm-1">Status</th>
+		<th class="col-sm-1">Public</th>
 		<th class="col-sm-1">Actions</th>
 	</tr>
 {foreach from=$user_instance key=instance_id item=instance} 
 <tr>
+	<td>
+        {if $instance.preview}
+			<p style="height:200px;overflow: hidden;">
+				<img src="{$instance.preview}" class="img-thumbnail">
+			</p>
+        {/if}
+	</td>
 	<td>
 		<p>
 {if $instance.status_pers == 100}
@@ -17,17 +25,12 @@
 		{$instance.url}
 {/if}
 		</p>
-		<p>{$instance.zone}</p>
-		<p class="text-muted">{$instance.size}, {$instance.disk} Gb</p>
+		<p><span class="text-muted">Zone:</span> {$instance.zone}</p>
+		<p><span class="text-muted">Size:</span> {$instance.size}</p>
+		<p><span class="text-muted">Disk:</span> {$instance.disk}</p>
 	</td>
 
-	<td>
-{if $instance.preview}
-	<p style="height:350px;overflow: hidden;">
-		<img src="{$instance.preview}" class="img-thumbnail">
-	</p>
-{/if}
-	</td>
+
 
 	<td>
 {if $instance.status == "active-trial"}
@@ -41,20 +44,20 @@
 	<span class="label label-info">installing</span>
 {/if}
 
-		<p>
-			Public:
-        {if $instance.public}
-			<span class="text-success bool-switch" data-id="{$instance.id}" data-section="msvhost" data-table="instance" data-field="public" data-value="1">{$t["yes"]}</span>
-        {else}
-			<span class="text-danger bool-switch" data-id="{$instance.id}" data-section="msvhost" data-table="instance" data-field="public" data-value="0">{$t["no"]}</span>
-        {/if}
-		</p>
+
+	</td>
+	<td>
+{if $instance.public}
+		<span class="text-success bool-switch" data-id="{$instance.id}" data-section="msvhost" data-table="instance" data-field="public" data-value="1">{$t["yes"]}</span>
+{else}
+		<span class="text-danger bool-switch" data-id="{$instance.id}" data-section="msvhost" data-table="instance" data-field="public" data-value="0">{$t["no"]}</span>
+{/if}
 	</td>
 	<td>
         {if $instance.status_pers == 100}
-			<a href="?instance_reset={$instance.id}" class="btn btn-warning">Reset</a>
+			<a href="?instance_stop={$instance.id}" class="btn btn-warning">Stop</a>
 		{else}
-			<a href="?instance_reset={$instance.id}" class="btn btn-warning disabled">Reset</a>
+			<a href="?instance_stop={$instance.id}" class="btn btn-warning disabled">Stop</a>
         {/if}
 
 		<a href="?instance_delete={$instance.id}" class="btn btn-danger ">Delete</a>
