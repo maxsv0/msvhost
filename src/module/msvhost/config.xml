@@ -7,13 +7,19 @@
 	<param name="adminMenu" value="true"/>
 	<param name="adminMenuOrder" value="1"/>
 
+	<param name="accessAPIList" value="admin"/>
+	<param name="accessAPIDetails" value="admin"/>
+	<param name="accessAPIEdit" value="admin"/>
+
 	<filter url="/user/" action="MsvhostLoadUser"/>
 	<filter url="/" action="MsvhostLoadInstanceList"/>
 
 	<api name="instance-status" action="ajaxInstanceStatus"/>
+	<api name="instance" action="ajaxInstanceAPI"/>
 
 	<constant name="TABLE_INSTANCE" value="instance"/>
 	<constant name="TABLE_INSTANCE_STATUS" value="instance_status"/>
+
 
 	<table name="instance" index="id" title="name">
 		<field name="id" type="id"/>
@@ -26,14 +32,14 @@
 		<field name="date_create" type="date"/>
 		<field name="admin_email" type="str" listskip="1"/>
 		<field name="name" type="str" listskip="1"/>
-		<field name="domain" type="str"/>
-		<field name="url" type="str" listskip="1"/>
+		<field name="domain" type="str" listskip="1"/>
+		<field name="url" type="url"	/>
 		<field name="type" type="str" listskip="1"/>
 		<field name="arch" type="str" listskip="1"/>
 		<field name="size" type="str" listskip="1"/>
 		<field name="zone" type="str" listskip="1"/>
 		<field name="disk" type="str" listskip="1"/>
-		<field name="lang" type="str"/>
+		<field name="language" type="str"/>
 		<field name="ga_track" type="str" listskip="1"/>
 		<field name="ga_property" type="str" listskip="1"/>
 		<field name="ip" type="str"/>

@@ -3,8 +3,8 @@
 
 <install>
 	<param name="name" value="msvhost" />
-	<param name="version" value="1.0.13"/>
-	<param name="date" value="19.07.2018"/>
+	<param name="version" value="1.0.14"/>
+	<param name="date" value="23.07.2018"/>
 	<param name="title" value="msvhost"/>
 	<param name="description" value="MSVHOST website builder"/>
 	<param name="tags" value="msvhost"/>

@@ -44,7 +44,7 @@
 
 .thumbnail {
     overflow: hidden;
-    min-height: 380px;
+    height: 380px;
 }
 
 .thumbnail-overlay {
@@ -75,6 +75,15 @@
     height: 100%;
 }
 
+.thumbnail-overlay-top {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: white;
+    position: relative;
+    z-index: 999;
+}
 
 .admin_panel {
     top: auto;
@@ -82,6 +91,70 @@
 
 .table-highlight .glyphicon-remove {
     color:#777;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 14px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 9px;
+    width: 9px;
+    left: 1px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #333746;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #333746;
+}
+
+input:checked + .slider:before {
+    -webkit-transsform: translateX(11px);
+    -ms-transform: translateX(11px);
+    transform: translateX(11px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 16px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.text-muted a {
+    color: #777;
 }
 
 
